@@ -1,33 +1,4 @@
-# AION 2 — Les guides de Ryuu
 
-Deux documents de préparation au **lancement global d'AION 2** (5 octobre 2026, PC / Steam & PURPLE).
-Écrits avant l'ouverture des serveurs européens, à partir de temps de jeu sur la version taïwanaise
-et d'un recoupement des sources coréennes, taïwanaises et francophones.
-
-| Fichier | Ce que c'est | Volume |
-|---|---|---|
-| `codex-atrea.html` | **Codex d'Atreia** — le jeu en général, du niveau 1 à l'endgame | 15 chapitres |
-| `guide-assassin.html` | **Guide Assassin** — la classe en détail, pensé pour la Saison 1 globale | 17 chapitres + annexe |
-
-Les deux sont indépendants. Le Guide Assassin est conçu comme un complément du Codex :
-il ne réexplique pas les systèmes généraux, il les applique à une classe.
-
----
-
-## Codex d'Atreia
-
-Du niveau 1 à l'endgame : la roadmap de leveling, les systèmes de puissance qui comptent
-vraiment, la routine quotidienne et hebdomadaire au niveau 45, et les pièges qui bloquent
-la plupart des joueurs la première semaine.
-
-Calendrier de lancement, faction et serveur, montée 1 à 45, puissance de combat, pyramide
-des statistiques, équipement, compétences, Daevanion et Panthéon, collections, routine, PvP,
-économie, confrontation des sources, mémo des erreurs, fiabilité des sources.
-
-**Sources** — expérience de la version taïwanaise, guides des chaînes **St4rline_TV** et
-**Aiola** (fan site [aion2.fr](https://www.aion2.fr/)), annonces officielles NCSOFT.
-
----
 
 ## Guide Assassin
 
