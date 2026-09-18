@@ -81,14 +81,10 @@ img{max-width:100%}
 .skl{white-space:nowrap;}
 .skl > .ic{width:1em; height:1em; color:var(--edge); margin-right:.3em; vertical-align:-.13em; opacity:.92;}
 .skl > .n{font-weight:700;}
-.ic-img{width:1.2em; height:1.2em; flex:none; vertical-align:-.24em; border-radius:3px; object-fit:cover;
-  box-shadow:0 0 0 1px rgba(120,110,170,.28);}
-.skl > .ic-img{width:1.18em; height:1.18em; margin-right:.32em; vertical-align:-.26em;}
-.icbox.img{background:transparent; padding:0; overflow:hidden;
-  border-color:color-mix(in srgb, var(--edge) 48%, transparent);}
-.icbox .ic-img{width:100%; height:100%; border-radius:6px; box-shadow:none;}
-td.k .ic-img, h3 .ic-img, .sp .nm .ic-img, .stigbar .n .ic-img{width:18px; height:18px; margin-right:6px;}
-.eyebrow .ic-img{width:14px; height:14px;}
+.ic-img{width:1.15em; height:1.15em; flex:none; vertical-align:-.2em; border-radius:3px; object-fit:cover;}
+.skl > .ic-img{width:1.05em; height:1.05em; margin-right:.3em; vertical-align:-.16em;}
+.icbox .ic-img{width:22px; height:22px; border-radius:5px;}
+td.k .ic-img, h3 .ic-img, .sp .nm .ic-img{width:16px; height:16px; margin-right:5px;}
 .icbox{
   width:34px; height:34px; flex:none; border-radius:7px; display:grid; place-items:center;
   background:var(--violet-soft); color:var(--violet-ink);
@@ -136,21 +132,21 @@ h1{
   width:min(300px,70%); height:1px; margin:0 0 18px;
   background:linear-gradient(90deg, var(--abyss-violet), rgba(180,164,255,.05));
 }
-.sig{display:flex; align-items:center; gap:clamp(14px,2.2vw,22px); margin:2px 0 24px; flex-wrap:wrap;}
+.sig{display:flex; align-items:center; gap:13px; margin:0 0 20px; flex-wrap:wrap;}
 .sig .mark{
-  width:clamp(86px,10vw,116px); height:clamp(86px,10vw,116px); border-radius:50%; flex:none;
-  object-fit:cover; object-position:52% center;
+  width:46px; height:46px; border-radius:50%; flex:none; display:grid; place-items:center;
   background:linear-gradient(150deg, rgba(180,164,255,.35), rgba(87,206,220,.18));
-  border:1px solid rgba(180,164,255,.6);
-  box-shadow:0 0 0 4px rgba(180,164,255,.10), 0 0 38px -8px rgba(180,164,255,.65);
+  border:1px solid rgba(180,164,255,.55);
+  font-family:"Cinzel",Georgia,serif; font-weight:900; font-size:1.2rem; color:#EFEBFF;
+  box-shadow:0 0 24px -6px rgba(180,164,255,.6);
 }
-.sig .who{display:flex; flex-direction:column; line-height:1.24;}
-.sig .nom{font-family:"Cinzel",Georgia,serif; font-size:clamp(1.5rem,3vw,1.9rem); font-weight:700; letter-spacing:.05em; color:var(--abyss-ink);}
+.sig .who{display:flex; flex-direction:column; line-height:1.22;}
+.sig .nom{font-family:"Cinzel",Georgia,serif; font-size:1.26rem; font-weight:700; letter-spacing:.05em; color:var(--abyss-ink);}
 .sig .nom .par{
   font-family:"JetBrains Mono",ui-monospace,monospace; font-size:10px; letter-spacing:.2em;
-  text-transform:uppercase; color:var(--abyss-violet); display:block; margin-bottom:5px; font-weight:400;
+  text-transform:uppercase; color:var(--abyss-violet); display:block; margin-bottom:3px; font-weight:400;
 }
-.sig .quoi{font-size:.88rem; color:var(--abyss-ink-2); margin-top:3px;}
+.sig .quoi{font-size:.83rem; color:var(--abyss-ink-2);}
 .dek{font-size:1.06rem; color:var(--abyss-ink-2); max-width:62ch; margin:0;}
 .byline{margin-top:18px; font-size:.79rem; color:var(--abyss-ink-2); opacity:.85; font-family:"JetBrains Mono",ui-monospace,monospace;}
 .strip{
@@ -374,27 +370,6 @@ td.k .ic{width:15px; height:15px; color:var(--edge); margin-right:5px; vertical-
 .sk-card p{margin:0; font-size:.85rem; color:var(--ink-2); max-width:none;}
 
 /* ============================================================
-   fiches de nodes
-   ============================================================ */
-.nodecard{border:1px solid var(--line); background:var(--surface); border-radius:6px;
-  padding:14px 16px 13px; margin:0 0 12px; max-width:var(--maxw);
-  transition:border-color .18s ease, box-shadow .18s ease;}
-.nodecard:hover{border-color:color-mix(in srgb, var(--edge) 50%, var(--line)); box-shadow:var(--glow);}
-.nodecard .nh{display:flex; align-items:center; gap:11px; margin-bottom:10px; flex-wrap:wrap;}
-.nodecard .nn{font-weight:700; font-size:1rem;}
-.nodecard .ng{font-family:"JetBrains Mono",ui-monospace,monospace; font-size:.7rem; font-weight:700;
-  color:var(--ink-3); background:var(--surface-2); padding:2px 7px; border-radius:3px; margin-left:auto;}
-.nodelist{display:flex; flex-direction:column; gap:1px;}
-.nodelist .opt{display:grid; grid-template-columns:11px 1fr; gap:10px; align-items:start;
-  padding:4px 0; font-size:.855rem; color:var(--ink-3);}
-.nodelist .opt.on{color:var(--ink);}
-.nodelist .dot{width:9px; height:9px; border-radius:50%; margin-top:.5em;
-  background:transparent; border:1.5px solid var(--line);}
-.nodelist .opt.on .dot{background:var(--edge); border-color:var(--edge); box-shadow:var(--glow);}
-.nodecard .nw{margin:10px 0 0; font-size:.85rem; color:var(--ink-2); max-width:none;
-  padding-top:9px; border-top:1px solid var(--line);}
-
-/* ============================================================
    spécialisations
    ============================================================ */
 .speclist{margin:6px 0 22px; border:1px solid var(--line); border-radius:5px; overflow:hidden; background:var(--surface);}
@@ -511,6 +486,34 @@ nav.toc.desk{display:none;}
   html{scroll-behavior:auto;}
   .rv{opacity:1; transform:none;}
 }
+
+/* --- relevés du Launch Scale Test, 17-18 septembre --- */
+.bta{
+  display:inline-flex; align-items:center; gap:4px; vertical-align:2px;
+  font-family:"JetBrains Mono",ui-monospace,monospace; font-size:9.2px; letter-spacing:.1em;
+  text-transform:uppercase; font-weight:700; white-space:nowrap; line-height:1.6;
+  color:var(--aether-ink); background:var(--aether-soft); border:1px solid var(--aether);
+  border-radius:999px; padding:1px 8px; margin-left:7px;
+}
+.bta::before{content:""; width:5px; height:5px; border-radius:50%; background:var(--aether); flex:none;}
+.betabox{
+  border:1px solid var(--aether); border-left:5px solid var(--aether); background:var(--surface);
+  border-radius:0 7px 7px 0; padding:22px 24px; margin:0 0 30px; box-shadow:var(--shadow);
+}
+.betabox .lab{color:var(--aether-ink); margin-bottom:9px;}
+.betabox h2{font-family:"Cinzel",serif; font-size:1.45rem; line-height:1.18; margin:0 0 8px; color:var(--ink);}
+.betabox > p{margin:0 0 18px; color:var(--ink-2); max-width:var(--maxw);}
+.betabox > p:last-child{margin:18px 0 0; font-size:.9rem; color:var(--ink-3);}
+.betabox ul{list-style:none; margin:0; padding:0; display:grid; gap:11px;}
+.betabox li{
+  background:var(--surface-2); border:1px solid var(--line); border-top:2px solid var(--aether);
+  border-radius:5px; padding:12px 14px; font-size:.92rem; color:var(--ink-2); min-width:0;
+}
+.betabox li b{display:block; color:var(--ink); margin-bottom:3px; font-size:.95rem;}
+.betabox li.wip{border-top-color:var(--gold);}
+.betabox li.wip b{color:var(--gold-ink);}
+@media (min-width:900px){ .betabox ul{grid-template-columns:1fr 1fr;} }
+@media (max-width:620px){ .betabox{padding:18px 16px;} .bta{margin-left:5px;} }
 </style>
 </head>
 <body>
@@ -554,8 +557,6 @@ nav.toc.desk{display:none;}
   <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 4v16"/><path d="M5 8h14"/><path d="M5 8 2 14h6Z"/><path d="M19 8l-3 6h6Z"/></symbol>
   <symbol id="i-pet" viewBox="0 0 24 24"><circle cx="8.5" cy="8" r="2"/><circle cx="15.5" cy="8" r="2"/><circle cx="5.5" cy="13.5" r="1.8"/><circle cx="18.5" cy="13.5" r="1.8"/><path d="M12 12c3 0 5 2.5 5 5a2.6 2.6 0 0 1-3.6 2.4 3.6 3.6 0 0 0-2.8 0A2.6 2.6 0 0 1 7 17c0-2.5 2-5 5-5Z"/></symbol>
   <symbol id="i-node" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="17" r="2"/><circle cx="19" cy="17" r="2"/><path d="M12 7v4M12 11 6.5 15.5M12 11l5.5 4.5"/></symbol>
-  <symbol id="i-poison" viewBox="0 0 24 24"><path d="M12 3s5 5.6 5 9.4A5 5 0 0 1 7 12.4C7 8.6 12 3 12 3Z"/><path d="M10 13a2 2 0 0 0 3.4 1.3"/></symbol>
-  <symbol id="i-smoke" viewBox="0 0 24 24"><path d="M5 17h13a3 3 0 0 0 0-6 4.5 4.5 0 0 0-8.6-1.6A3.2 3.2 0 0 0 5 17Z"/><path d="M7 21h4M14 21h3"/></symbol>
   <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s4-6 10-6 10 6 10 6-4 6-10 6-10-6-10-6Z"/><circle cx="12" cy="12" r="2.6"/></symbol>
 </defs></svg>
 
@@ -602,7 +603,7 @@ nav.toc.desk{display:none;}
     <div class="h1rule"></div>
 
     <div class="sig">
-      <img class="mark" src="jiji-evil-eye-dandadan.webp" alt="" aria-hidden="true" width="116" height="116">
+      <span class="mark" aria-hidden="true">R</span>
       <span class="who">
         <span class="nom"><span class="par">Écrit par</span>Ryuu</span>
         <span class="quoi">Assassin sur la version taïwanaise &middot; guide écrit pour la Saison 1 globale</span>
@@ -610,7 +611,7 @@ nav.toc.desk{display:none;}
     </div>
 
     <p class="dek">Mon build, ma rota et mes arbitrages pour la Saison&nbsp;1 globale. Écrit pour la version qu'on va vraiment recevoir : <strong>4 slots de stigma</strong> annoncés au lieu de 6, skills et stigmas cap 20, et un budget de points qui ne permet pas de tout monter. Donc pas de « build parfait » ici — juste où je mets chaque point quand il n'y en a pas assez.</p>
-    <p class="byline">Mon temps de jeu TW + 4 guides vidéo dépouillés (DocDany, aLuckyRO) + les dossiers KR &middot; deux semaines d'écriture, à jour au 15 septembre 2026</p>
+    <p class="byline">Mon temps de jeu TW + 4 guides vidéo dépouillés (DocDany, aLuckyRO) + les dossiers KR &middot; MAJ 13 septembre 2026</p>
 
     <dl class="strip">
       <div><dt>Rôle</dt><dd>Melee DPS<span class="sub">burst, backstab</span></dd></div>
@@ -622,6 +623,22 @@ nav.toc.desk{display:none;}
 </header>
 
 <div class="shell">
+
+  <section class="betabox" id="sbeta">
+    <span class="lab a"><svg class="ic"><use href="#i-swift"/></svg>Mise &agrave; jour du 18 septembre</span>
+    <h2>Ce que la b&ecirc;ta a tranch&eacute;</h2>
+    <p>J'ai mont&eacute; un Assassin pendant la premi&egrave;re journ&eacute;e du Launch Scale Test, le 17 au soir. Le pari central du guide tient, et j'ai pu relever en jeu des choses qu'aucune source ne donnait. Tout est repris au bon endroit dans les chapitres, rep&eacute;r&eacute; par la pastille <span class="bta">vu en b&ecirc;ta</span></p>
+    <ul>
+      <li><b>Quatre slots de stigma</b>Le chiffre sur lequel tout ce guide est construit est le bon. C'est pr&eacute;sent&eacute; comme une limite de Saison&nbsp;1, la Saison&nbsp;2 devrait en rendre en m&ecirc;me temps qu'elle ajoutera le Pugiliste.</li>
+      <li><b>Les stigmas s'ouvrent au niveau 22</b>Par la qu&ecirc;te &laquo;&nbsp;&Agrave; l'&eacute;coute des voix&nbsp;&raquo;. Avant &ccedil;a le panneau entier est cadenass&eacute;, donc tout le chapitre&nbsp;7 commence au niveau 22.</li>
+      <li><b>Les nodes de stigma tombent aux niveaux 5, 10, 15 et 20</b>Quatre nodes automatiques, rien &agrave; choisir. C'est exactement pour &ccedil;a que les ordres de mont&eacute;e du chapitre&nbsp;7 parlent de 5, de 10, de 15 et de 20, et pas d'autres chiffres.</li>
+      <li><b>Le node 15 de Swift Contract multiplie Assault Stance</b>Le d&eacute;tail que je ne m'attendais pas &agrave; trouver. Il est pris en entier au chapitre&nbsp;7, et il change l'int&eacute;r&ecirc;t de monter ce stigma au-del&agrave; de 10.</li>
+      <li><b>Cinq options de sp&eacute;, verrouill&eacute;es &agrave; 8, 8, 8, 12 et 16</b>Chaque actif affiche son palier sur chaque ligne. Trois options sont d&eacute;j&agrave; l&agrave; au niveau 8, les grosses sont au 12 et au 16.</li>
+      <li><b>Trois emplacements de sp&eacute;cialisation</b>La barre &laquo;&nbsp;Sp&eacute;cialis&eacute;&nbsp;&raquo; en montre trois, donc trois options sur cinq. Le chapitre&nbsp;6 reste valable, il y a juste un plafond ferme.</li>
+      <li class="wip"><b>Ce qui reste ouvert</b>Le reste des noms fran&ccedil;ais. Je n'en ai relev&eacute; que deux avec certitude en six heures, et le cap du test au niveau 37 laissait la moiti&eacute; du kit hors de port&eacute;e.</li>
+    </ul>
+    <p>Six heures de jeu, personnages effac&eacute;s &agrave; la fin. Ce qui suit est relev&eacute; &agrave; l'&eacute;cran, pas d&eacute;duit, et c'est la seule partie de ce guide que j'ai vue de mes yeux sur le client global.</p>
+  </section>
 
   <details class="mobile-toc">
     <summary>Sommaire — 17 chapitres + une annexe</summary>
@@ -642,8 +659,8 @@ nav.toc.desk{display:none;}
         <p class="sec-intro">Avant les tableaux, le contrat. L'Assassin est le melee DPS à dagues du jeu, classé 5/5 en difficulté, et cette difficulté ne vient pas de la rota : elle vient du fait que la quasi-totalité de vos multiplicateurs sont conditionnés au backstab.</p>
 
         <div class="grid">
-          <div class="card"><span class="tag">Rôle</span><h4><svg class="ic"><use href="#i-target"/></svg>Melee DPS mono-cible</h4><p>Deux dagues, armure de cuir. On engage, on descend une cible pendant la fenêtre de burst, on décroche. Aucune utilité pour le groupe en dehors des dégâts.</p></div>
-          <div class="card"><span class="tag">Le point fort</span><h4><svg class="ic"><use href="#i-clone"/></svg>L'uptime de burst</h4><p>Deux buffs alignés et un dos exposé, et la cible tombe en quelques secondes. Bien monté, l'Assassin passe la majorité du combat sous buff au lieu d'attendre ses CD.</p></div>
+          <div class="card"><span class="tag">Rôle</span><h4><svg class="ic"><use href="#i-target"/></svg>Melee DPS mono-cible</h4><p>Deux dagues, armure de cuir. On rentre, on vide une cible dans une fenêtre de burst, on ressort. Zéro utilité pour le groupe en dehors des dégâts.</p></div>
+          <div class="card"><span class="tag">Le point fort</span><h4><svg class="ic"><use href="#i-clone"/></svg>L'uptime de burst</h4><p>Deux buffs alignés, un dos exposé, et la cible fond. Bien monté, l'Assassin passe la majorité du combat sous buff au lieu d'attendre ses CD.</p></div>
           <div class="card"><span class="tag">Le point faible</span><h4><svg class="ic"><use href="#i-warn"/></svg>Tout ce qui vous sort du dos</h4><p>Un boss qui pivote, un tank qui déplace le pack, une méca qui vous éjecte : le DPS ne baisse pas de 10&nbsp;%, il s'écroule.</p></div>
         </div>
 
@@ -662,7 +679,7 @@ nav.toc.desk{display:none;}
         </div>
         <div class="note gold">
           <span class="lab g"><svg class="ic"><use href="#i-star"/></svg>Ma hiérarchie de DPS</span>
-          <p>Dans l'ordre : <strong>1)</strong> le temps passé dans le dos, <strong>2)</strong> l'uptime de vos deux buffs, <strong>3)</strong> les paliers de skills atteints, <strong>4)</strong> les stats brutes. Les gens optimisent dans l'ordre inverse, et c'est pour ça qu'on croise des Assassins à gros gear score qui ne sortent aucun DPS.</p>
+          <p>Dans l'ordre : <strong>1)</strong> le temps passé dans le dos, <strong>2)</strong> l'uptime de vos deux buffs, <strong>3)</strong> les paliers de skills atteints, <strong>4)</strong> les stats brutes. Les gens optimisent dans l'ordre inverse, et c'est pour ça qu'on croise des Assassins à gros gear score qui tapent comme des sangliers.</p>
         </div>
 
         <h3><svg class="ic"><use href="#i-macro"/></svg>Action combat ou tab-target</h3>
@@ -676,7 +693,7 @@ nav.toc.desk{display:none;}
 
         <h3><svg class="ic"><use href="#i-eye"/></svg>Qui devrait la jouer</h3>
         <p>Je vais être franc, c'est plus utile qu'un paragraphe d'ambiance. Prenez Assassin si vous aimez le placement, si un combat de boss vous intéresse plus par sa choré que par sa barre de vie, et si une connexion instable n'est pas votre quotidien.</p>
-        <p>Passez votre chemin si vous voulez une classe qui pardonne pendant l'apprentissage d'un donjon, si vous jouez surtout en pick-up où personne ne tient le boss en place, ou si vous comptez jouer une main sur le clavier et l'autre sur le téléphone. Jouée distraitement, cette classe ne sort rien du tout.</p>
+        <p>Passez votre chemin si vous voulez une classe qui pardonne pendant l'apprentissage d'un donjon, si vous jouez surtout en pick-up où personne ne tient le boss en place, ou si vous comptez jouer une main sur le clavier et l'autre sur le téléphone. Ce n'est pas une classe qu'on joue distraitement, elle rend très mal.</p>
       </section>
 
       <!-- ============ 2 ============ -->
@@ -689,13 +706,13 @@ nav.toc.desk{display:none;}
           <table>
             <thead><tr><th>Système</th><th>KR / TW</th><th>Saison 1 globale</th><th>Ce que ça change</th></tr></thead>
             <tbody>
-              <tr><td class="k">Slots de stigma</td><td class="num">5 puis 6</td><td class="num">4</td><td>Un à deux stigmas à sacrifier. C'est l'arbitrage du chapitre&nbsp;7.</td></tr>
+              <tr><td class="k">Slots de stigma</td><td class="num">5 puis 6</td><td class="num">4</td><td>Un à deux stigmas à sacrifier. C'est l'arbitrage du chapitre&nbsp;7.<span class="bta">vu en bêta</span></td></tr>
               <tr><td class="k">Cap des stigmas</td><td class="num">25</td><td class="num">20</td><td>Le CDR qu'on gagne au stigma 25 ne sera pas là au lancement. Les rotas « permanent uptime » filmées en KR sont hors de portée pour l'instant.</td></tr>
               <tr><td class="k">Cap des skills</td><td class="num">25</td><td class="num">20</td><td>Tous les paliers au-delà de 20 décrits dans les guides KR sont à ignorer.</td></tr>
-              <tr><td class="k">Gear héroïque</td><td>Dispo</td><td>Absent</td><td>Pas de pièces à +20. On reste sur l'unique à +15, puis les étoiles.</td></tr>
-              <tr><td class="k">Difficultés de donjon</td><td>Jusqu'au tier héroïque</td><td class="num">1★ / 2★ / 3★</td><td>Plafond de progression plus bas, donc seuils de stats plus bas aussi.</td></tr>
+              <tr><td class="k">Gear héroïque</td><td>Dispo</td><td>Absent</td><td>Pas de pièces à +20. On reste sur l'unique à +15, puis les étoiles.<span class="bta">vu en bêta</span></td></tr>
+              <tr><td class="k">Difficultés de donjon</td><td>Jusqu'au tier héroïque</td><td class="num">1★ / 2★ / 3★</td><td>Plafond de progression plus bas, donc seuils de stats plus bas aussi.<span class="bta">vu en bêta</span></td></tr>
               <tr><td class="k">Gates d'iLevel</td><td>Plus bas</td><td class="num">≈800 → 2200+</td><td>≈800 pour l'expédition 1★, 2200+ visés pour la 3★.</td></tr>
-              <tr><td class="k">Taille des groupes</td><td class="num">4 / 8</td><td class="num">5 / 10</td><td>Expéditions à 5, raids à 10, cross-faction autorisé en PvE.</td></tr>
+              <tr><td class="k">Taille des groupes</td><td class="num">4 / 8</td><td class="num">5 / 10</td><td>Expéditions à 5, raids à 10, cross-faction autorisé en PvE.<span class="bta">vu en bêta</span></td></tr>
             </tbody>
           </table>
         </div>
@@ -706,38 +723,37 @@ nav.toc.desk{display:none;}
         </div>
 
         <h3><svg class="ic"><use href="#i-star"/></svg>La bonne nouvelle quand même</h3>
-        <p>Moins de slots, ce n'est pas que de la perte. Vos stigma shards tombent au même rythme : au lieu de les diluer sur six skills, vous les concentrez sur quatre. Vous atteignez donc les paliers de vos stigmas clés <strong>nettement plus vite</strong> qu'un joueur TW au même stade. Le build global est plus étroit, mais il arrive à maturité plus tôt.</p>
-        <p>Deuxième effet : sans gear héroïque, l'écart entre un joueur de trois heures par semaine et un joueur de trente sera plus faible qu'en Corée. La différence se fera sur les paliers de skills et sur le placement — des choses qui se travaillent, pas qui s'achètent.</p>
+        <p>Moins de slots, ce n'est pas que de la perte. Vos stigma shards tombent au même rythme : au lieu de les diluer sur six skills, vous les concentrez sur quatre. Vous atteignez donc les paliers de vos stigmas clés <strong>nettement plus vite</strong> qu'un joueur TW au même stade. Le build global est moins riche mais il mûrit plus vite.</p>
+        <p>Deuxième effet : l'absence de gear héroïque aplatit la courbe. L'écart entre un joueur de trois heures par semaine et un joueur de trente sera plus faible qu'en Corée. La différence se fera sur les paliers de skills et sur le placement — des choses qui se travaillent, pas qui s'achètent.</p>
 
         <div class="note ndlr">
           <span class="lab n"><svg class="ic"><use href="#i-book"/></svg>Mon avis</span>
-          <p>Le chiffre de 4 slots vient des communications NC sur la globale, et il colle au système de base KR où on choisissait 4 stigmas parmi 12. Mes deux sources vidéo, elles, tournent avec 5 slots côté KR au moment du tournage, et les dossiers écrits les plus récents en décrivent 6 après le Chapitre&nbsp;1. La tendance est claire : NCSoft élargit au fil des patchs. Partir sur 4 au lancement me paraît donc cohérent. C'est l'hypothèse de travail de tout le guide et c'est la première chose que j'irai vérifier en jeu.</p>
+          <p>Le chiffre de 4 slots vient des communications NC sur la globale, et il colle au système de base KR où on choisissait 4 stigmas parmi 12. Mes deux sources vidéo, elles, tournent avec 5 slots côté KR au moment du tournage, et les dossiers écrits les plus récents en décrivent 6 après le Chapitre&nbsp;1. Le sens de l'histoire est clair, ça s'élargit avec le temps, donc 4 au lancement me paraît cohérent. C'était l'hypothèse de travail de tout le guide, et la bêta l'a confirmée.<span class="bta">vu en bêta</span> Quatre emplacements, présentés comme une limite de Saison 1. La Saison 2 devrait en rendre, en même temps qu'elle ajoutera le Pugiliste. Vous pouvez lire la suite sans arrière-pensée.</p>
         </div>
       </section>
 
-            <!-- ============ 3 ============ -->
+      <!-- ============ 3 ============ -->
       <section id="s3" class="rv">
         <span class="sec-num"><svg class="ic"><use href="#i-scale"/></svg>Chapitre 03 — Le budget</span>
         <h2 class="sec">Vos points, et pourquoi ils ne suffiront jamais</h2>
-        <p class="sec-intro">Le jeu ne donne pas assez de points pour monter tous les skills, et ce n'est pas un accident : les devs présentent eux-mêmes la montée des skills comme du contenu endgame. Comprendre d'où viennent les points et où ils s'arrêtent, ça sépare un build qui avance d'un build saupoudré partout.</p>
+        <p class="sec-intro">Le jeu ne donne pas assez de points pour monter tous les skills, et ce n'est pas un accident : les devs présentent eux-mêmes la montée des skills comme du contenu endgame. Comprendre d'où viennent les points et où ils s'arrêtent, c'est là que se joue la différence entre progresser et saupoudrer.</p>
 
         <div class="note gold">
           <span class="lab g"><svg class="ic"><use href="#i-scale"/></svg>L'ordre de grandeur</span>
-          <p>À la fin du leveling vous aurez <strong>environ 240 skill points</strong> — le chiffre vient d'aLuckyRO, qui a monté un Assassin exprès pour mesurer la contrainte du début de vie. Pour situer : un seul skill cœur poussé à fond coûte <strong>21 SP</strong>, et un passif aussi. Faites le calcul : le budget est mangé en quatre ou cinq lignes.</p>
+          <p>À la fin du leveling vous aurez <strong>environ 240 skill points</strong> — le chiffre vient d'aLuckyRO, qui a monté un Assassin exprès pour mesurer la contrainte du début de vie. De quoi poser correctement quatre ou cinq skills, pas douze. Tout ce qui suit découle de là.</p>
         </div>
 
-        <h3><svg class="ic"><use href="#i-node"/></svg>Un niveau de skill, ça se paie à quatre guichets</h3>
-        <p>C'est le point que je n'avais pas compris au début, et il change tout le raisonnement. Un skill au niveau&nbsp;20 n'a presque jamais 20 niveaux payés en skill points. Sur une feuille de perso endgame, un <span class="skl" data-skill="heart-gore"><svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg><span class="n">Heart Gore</span></span> au niveau 20 se décompose typiquement en <span class="mono">7</span> niveaux de skill points, <span class="mono">+4</span> d'arcanes, <span class="mono">+9</span> de Daevanion et <span class="mono">+2</span> de gear.</p>
+        <h3><svg class="ic"><use href="#i-node"/></svg>Les trois sources de niveaux</h3>
         <div class="budget">
           <div class="bar">
-            <div class="seg b1">Skill points<br>le socle</div>
-            <div class="seg b2">Arcanes &amp; Daevanion<br>le gros du complément</div>
-            <div class="seg b3">Gear<br>l'appoint</div>
+            <div class="seg b1">Mastery points<br>niveaux 1 → 10</div>
+            <div class="seg b2">Arcanes &amp; Daevanion<br>11 → 20</div>
+            <div class="seg b3">Gear<br>bonus +1</div>
           </div>
           <div class="legend">
-            <div><strong>Skill points.</strong> Gagnés en level up, puis via les plumes et les boutiques d'event. Ils cappent un skill au <strong>niveau 10</strong>, jamais plus haut.</div>
-            <div><strong>Arcanes et Daevanion.</strong> C'est là que se joue la vraie montée. Sur les skills cœur, ces deux systèmes apportent souvent plus de niveaux que vos propres points.</div>
-            <div><strong>Soul imprints du gear.</strong> Un ou deux niveaux, gratuits et random, mais qui suffisent parfois à franchir un palier.</div>
+            <div><strong>Mastery points.</strong> Gagnés en level up, puis via les plumes et les boutiques d'event. Ils cappent un skill au <strong>niveau 10</strong>, jamais plus haut.</div>
+            <div><strong>Arcanes et Daevanion.</strong> C'est par là et seulement par là qu'on passe de 11 à 20. Une carte d'arcane donne +1, +2 ou +3 niveaux sur un skill nommé.</div>
+            <div><strong>Soul imprints du gear.</strong> Des pièces sortent avec un « +1 » sur un skill. Gratuit, random, mais ça fait basculer un palier.</div>
           </div>
         </div>
 
@@ -745,9 +761,9 @@ nav.toc.desk{display:none;}
           <table>
             <thead><tr><th>Source</th><th>Type</th><th>Détail</th></tr></thead>
             <tbody>
-              <tr><td class="k">Level ups</td><td>Skill points</td><td>≈240 points au total en arrivant au 45.</td></tr>
-              <tr><td class="k">Plumes / monolithe</td><td>Skill points</td><td>Environ <span class="mono">560</span> plumes sur les cartes, à déposer au monolithe. La plus grosse source gratuite du jeu, et celle que tout le monde néglige. Elle conditionne aussi deux titres (chapitre&nbsp;10).</td></tr>
-              <tr><td class="k">Boutiques d'event</td><td>Skill points</td><td>Les mini-jeux type Shugo Festa donnent des jetons échangeables contre des skill points.</td></tr>
+              <tr><td class="k">Level ups</td><td>Mastery</td><td>≈240 points au total en arrivant au 45.</td></tr>
+              <tr><td class="k">Plumes / monolithe</td><td>Mastery</td><td>Environ <span class="mono">560</span> plumes sur les cartes, à déposer au monolithe. La plus grosse source gratuite du jeu, et celle que tout le monde néglige. Elle conditionne aussi deux titres (chapitre&nbsp;10).</td></tr>
+              <tr><td class="k">Boutiques d'event</td><td>Mastery</td><td>Les mini-jeux type Shugo Festa donnent des jetons échangeables contre des skill points.</td></tr>
               <tr><td class="k">Quêtes vertes</td><td>Daevanion</td><td>Elles lâchent des objets qui donnent des points Daevanion.</td></tr>
               <tr><td class="k">Donjons scellés &amp; bastions</td><td>Daevanion</td><td>Premier clear = objets à points. À faire sur votre carte <em>et</em> sur celle d'en face.</td></tr>
               <tr><td class="k">Cartes d'arcane</td><td>Niveaux directs</td><td>Récupérées dans les transcendances. Chaque carte porte des skills nommés.</td></tr>
@@ -755,23 +771,27 @@ nav.toc.desk{display:none;}
           </table>
         </div>
 
-        <h3><svg class="ic"><use href="#i-node"/></svg>Les paliers de nodes, enfin au clair</h3>
-        <p>Chaque skill propose <strong>cinq nodes</strong>, et le niveau du skill décide de combien vous pouvez en activer. C'était le point le plus flou de mes sources écrites : le planner de build tranche, et c'est <strong>1 / 2 / 3</strong>.</p>
+        <h3><svg class="ic"><use href="#i-node"/></svg>Les paliers, c'est ça qu'on vise</h3>
+        <p>Un skill ne monte pas en puissance de façon linéaire. Il débloque des <strong>spécialisations</strong> à des paliers précis, et une spé change souvent la nature du skill plutôt que son chiffre. On en choisit <strong>3 sur 5</strong>.</p>
         <div class="gates">
-          <div class="gate"><span class="lv">8</span><span class="lb">1 node</span><p>Le premier choix. Le minimum pour qu'un skill compte dans la rota.</p></div>
-          <div class="gate"><span class="lv">12</span><span class="lb">2 nodes</span><p>Le deuxième. C'est là que la plupart des skills de soutien s'arrêtent, et c'est très bien comme ça.</p></div>
-          <div class="gate"><span class="lv">20</span><span class="lb">3 nodes</span><p>Le troisième et dernier, et le cap de la Saison&nbsp;1. Réservé aux skills cœur.</p></div>
+          <div class="gate"><span class="lv">8</span><span class="lb">Premier palier</span><p>La première spé. Le minimum pour qu'un skill compte dans la rota.</p></div>
+          <div class="gate"><span class="lv">16</span><span class="lb">Deuxième palier</span><p>Le plus gros saut. C'est là qu'arrivent les effets qui transforment le skill : reset de CD, lifesteal, multi-hit.</p></div>
+          <div class="gate"><span class="lv">20</span><span class="lb">Troisième palier</span><p>La dernière spé, et le cap de la Saison&nbsp;1. Réservé à vos trois ou quatre skills cœur.</p></div>
         </div>
-        <p>Deuxième subtilité : certains nodes ne sont pas seulement bloqués par le nombre de slots, ils sont <strong>marqués Nv12 ou Nv16</strong> dans leur description. Ils n'apparaissent dans la liste qu'à partir de ce niveau de skill, même si vous avez un slot libre. Un skill à 16 vaut donc nettement mieux qu'un skill à 14, alors que le nombre de nodes n'a pas bougé.</p>
 
         <div class="note">
           <span class="lab a"><svg class="ic"><use href="#i-target"/></svg>L'objectif de fin de course</span>
-          <p><strong>Quatre skills au 20, un au 16, tout le reste au 12 ou en dessous.</strong> Sur la feuille que j'ai sous les yeux : Savage Roar, Insignia Explosion, Quick Slice et Heart Gore à 20, Infiltrate à 16, Ambush à 14, Shadowstrike / Whirlwind Slice / Flash Slice à 12, et Storm Rampage, Defiance et Shadow Fall en dessous de 10. C'est bien plus atteignable que les plans « tout à 20 » des dossiers KR.</p>
+          <p><strong>Trois skills au 20, un au 16, tout le reste au 12.</strong> C'est ce que vise DocDany, et c'est bien plus atteignable que les plans « tout à 20 » des dossiers KR. Le quatrième skill cœur monte à 20 quand les points suivent, pas avant. Au-delà de 12 sur un skill secondaire, vous payez cher un gain qui ne se voit pas.</p>
         </div>
 
         <div class="note trap">
           <span class="lab"><svg class="ic"><use href="#i-warn"/></svg>L'erreur de répartition classique</span>
-          <p>Monter huit skills au 12 « pour être équilibré ». Vous aurez claqué tout le budget dans des deuxièmes nodes qui ne transforment rien, au lieu de payer les troisièmes qui changent la classe. <strong>Le troisième node d'un skill cœur vaut plus que le deuxième node de trois skills secondaires.</strong></p>
+          <p>Monter huit skills au 12 « pour être équilibré ». Vous aurez claqué tout le budget entre deux paliers, c'est-à-dire dans la zone où les points ne rapportent presque rien. <strong>Quatre skills à 16 valent largement mieux que huit à 12</strong> — et 12, c'est le plancher des secondaires, pas leur objectif.</p>
+        </div>
+
+        <div class="note ndlr">
+          <span class="lab n"><svg class="ic"><use href="#i-book"/></svg>Mon avis</span>
+          <p>Sur les niveaux exacts d'ouverture des spés, mes sources ne s'accordent pas complètement : la plupart des builds détaillés raisonnent en <strong>8 / 16 / 20</strong>, une source place le deuxième palier au 12. Comme aucun guide de build ne recommande plus de deux spés avant le 16, j'ai retenu 8 / 16 / 20 partout. À vérifier en jeu, c'est deux minutes de check et ça change l'ordre de dépense.</p>
         </div>
 
         <div class="note gold">
@@ -783,108 +803,114 @@ nav.toc.desk{display:none;}
       <!-- ============ 4 ============ -->
       <section id="s4" class="rv">
         <span class="sec-num"><svg class="ic"><use href="#i-book"/></svg>Chapitre 04 — Le kit</span>
-        <h2 class="sec">Les 12 actifs et les 10 passifs</h2>
-        <p class="sec-intro">Noms anglais partout : c'est ce que le client affiche, c'est ce qui circule dans les guides et sur Discord. Les effets ci-dessous sont ceux des nodes, relevés sur un planner de build à jour — pas des descriptions de seconde main.</p>
+        <h2 class="sec">Les skills, et pourquoi je garde les noms anglais</h2>
+        <p class="sec-intro">Les noms français existent, la bêta les affiche.<span class="bta">vu en bêta</span> Je n'en ai relevé que deux avec certitude en six heures de test, et côté anglophone chaque source traduit encore le coréen à sa façon, j'ai croisé le même skill sous quatre noms différents. Je garde donc les noms anglais partout. C'est ce qui circule dans les guides, dans les vidéos et sur Discord, et c'est ce qui vous permettra d'ouvrir un build TW ou KR sans traduire dans votre tête.</p>
 
-        <h3><svg class="ic"><use href="#i-star"/></svg>Les quatre skills cœur</h3>
-        <p>Ce sont les seuls que je monte au niveau 20, et ils coûtent <strong>21 SP</strong> chacun. Ils partagent une mécanique que mes sources écrites m'avaient mal expliquée : les <strong>Insignias</strong> ne viennent pas que de Savage Roar. Heart Gore en pose une, Ambush en pose deux quand il tombe dans le dos. C'est ça qui alimente l'explosion.</p>
+        <h3><svg class="ic"><use href="#i-star"/></svg>Les skills cœur</h3>
         <div class="kit">
           <div class="sk-card core">
             <span class="icbox gold"><svg class="ic" data-skill="heart-gore"><use href="#i-heart"/></svg></span>
             <div>
               <div class="h"><span class="nm">Heart Gore</span><span class="goal">→ 20</span></div>
-              <p>Le moteur. Son node le plus important <strong>reset son propre cooldown sur un crit</strong> : sous Illusive Clone on le spam en boucle. Il engrave aussi une Insignia à chaque hit et monte jusqu'à <strong>+20&nbsp;% de crit</strong> quand il touche peu de cibles.</p>
+              <p>Le moteur. Au palier 16, un crit <strong>reset son propre cooldown</strong> : sous <span class="skl" data-skill="illusion-clone"><svg class="ic" aria-hidden="true"><use href="#i-clone"/></svg><span class="n">Illusion Clone</span></span> on le spam en boucle tant que les crits tombent. C'est le skill à monter en priorité absolue.</p>
             </div>
           </div>
           <div class="sk-card core">
             <span class="icbox gold"><svg class="ic" data-skill="insignia-explosion"><use href="#i-rune"/></svg></span>
             <div>
               <div class="h"><span class="nm">Insignia Explosion</span><span class="goal">→ 20</span></div>
-              <p>Fait exploser les Insignias. <strong>Le plus gros coup unitaire de la classe</strong> : DocDany mesure 41-42k par explosion contre 15-16k pour un Heart Gore. Nodes clés : <strong>+50&nbsp;% multi-hit</strong>, <strong>−3&nbsp;s de cooldown</strong>, et surtout <strong>garder 2 stacks après l'explosion</strong>.</p>
+              <p>Fait exploser les runes accumulées. <strong>Le plus gros coup unitaire de la classe et de loin</strong> : DocDany mesure 41-42k par explosion contre 15-16k pour un <span class="skl" data-skill="heart-gore"><svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg><span class="n">Heart Gore</span></span>.</p>
             </div>
           </div>
           <div class="sk-card core">
-            <span class="icbox gold"><svg class="ic" data-skill="quick-slice"><use href="#i-slash"/></svg></span>
+            <span class="icbox gold"><svg class="ic" data-skill="quick-slash"><use href="#i-slash"/></svg></span>
             <div>
-              <div class="h"><span class="nm">Quick Slice</span><span class="goal">→ 20</span></div>
-              <p>Le filler, et bien plus que ça une fois monté : il <strong>retire 1&nbsp;s au cooldown d'Insignia Explosion à chaque hit</strong>, absorbe 0,7&nbsp;% des HP, et son dernier node <strong>ignore block et evasion, et sort en crit garanti</strong>.</p>
+              <div class="h"><span class="nm">Quick Slash</span><span class="goal">→ 20</span></div>
+              <p>Le filler, celui qui récupère la ressource. En début de jeu on le spé <strong>mana</strong>, plus tard on bascule sur le lifesteal.</p>
             </div>
           </div>
           <div class="sk-card core">
             <span class="icbox gold"><svg class="ic" data-skill="savage-roar"><use href="#i-fang"/></svg></span>
             <div>
               <div class="h"><span class="nm">Savage Roar</span><span class="goal">→ 20</span></div>
-              <p>Celui que vous lancez le plus souvent, et c'est pour ça qu'on le monte : <strong>+20&nbsp;% de skill speed</strong> se ressent sur toute la rota. Son autre node retire <strong>1&nbsp;s au cooldown de Shadowstrike</strong> à chaque hit, ce qui fait revenir le buff de crit plus vite.</p>
+              <p>Pose les runes et le debuff. C'est le skill le plus spammé du kit, donc son gain de <strong>skill speed</strong> au palier haut se ressent sur toute la rota.</p>
+            </div>
+          </div>
+          <div class="sk-card core">
+            <span class="icbox gold"><svg class="ic" data-skill="storm-rampage"><use href="#i-storm"/></svg></span>
+            <div>
+              <div class="h"><span class="nm">Storm Rampage</span><span class="goal">→ 16</span></div>
+              <p>Retire du cooldown à chaque hit. <strong>Inutilisable sous le palier 16</strong> — c'est le skill le plus mal joué de la classe, voir le chapitre&nbsp;13.</p>
             </div>
           </div>
         </div>
 
         <div class="note gold">
           <span class="lab g"><svg class="ic"><use href="#i-scale"/></svg>La conséquence de ces chiffres</span>
-          <p>Heart Gore est votre skill de DPS parce que vous le lancez sans arrêt, mais <strong>Insignia Explosion tape presque trois fois plus fort par coup</strong>. C'est pour ça qu'elle passe devant dans l'ordre de la macro (chapitre&nbsp;12) : en plein burst, Heart Gore se reset en boucle et finirait par ne jamais laisser passer l'explosion. Et le node « garder 2 stacks » fait que l'explosion suivante repart déjà chargée.</p>
+          <p><span class="skl" data-skill="heart-gore"><svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg><span class="n">Heart Gore</span></span> est votre skill de DPS parce que vous le lancez sans arrêt, mais <strong><span class="skl" data-skill="insignia-explosion"><svg class="ic" aria-hidden="true"><use href="#i-rune"/></svg><span class="n">Insignia Explosion</span></span> tape presque trois fois plus fort par coup</strong>. C'est pour ça qu'elle passe devant dans l'ordre de la macro (chapitre&nbsp;12) : en plein burst, <span class="skl" data-skill="heart-gore"><svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg><span class="n">Heart Gore</span></span> se reset en boucle et finirait par ne jamais laisser passer l'explosion.</p>
         </div>
 
-        <h3><svg class="ic"><use href="#i-swift"/></svg>Les huit autres actifs</h3>
+        <h3><svg class="ic"><use href="#i-swift"/></svg>Les skills de soutien</h3>
         <div class="kit">
           <div class="sk-card">
-            <span class="icbox"><svg class="ic" data-skill="shadowstrike"><use href="#i-shadowstrike"/></svg></span>
-            <div><div class="h"><span class="nm">Shadowstrike</span><span class="goal">→ 12</span></div>
-            <p><strong>+40&nbsp;% de crit damage boost pendant 5&nbsp;s</strong> sur le caster. C'est la première ligne de l'opener et de la macro. Second node utile : 50&nbsp;% de chance de root 5&nbsp;s.</p></div>
+            <span class="icbox"><svg class="ic" data-skill="shadow-strike"><use href="#i-shadowstrike"/></svg></span>
+            <div><div class="h"><span class="nm">Shadow Strike</span><span class="goal">→ 8</span></div>
+            <p>Buff de <strong>crit damage boost pendant 5&nbsp;s</strong>. C'est la première ligne de l'opener et de la macro.</p></div>
           </div>
           <div class="sk-card">
             <span class="icbox"><svg class="ic" data-skill="ambush"><use href="#i-ambush"/></svg></span>
-            <div><div class="h"><span class="nm">Ambush</span><span class="goal">→ 14</span></div>
-            <p>Votre principal générateur d'Insignias : <strong>2 d'un coup quand il touche dans le dos</strong>, pour 10&nbsp;s. Plus 3&nbsp;% de HP absorbés. Ne coûte que 5&nbsp;SP, c'est un des meilleurs rapports du kit.</p></div>
+            <div><div class="h"><span class="nm">Ambush</span><span class="goal">→ 8 / 12</span></div>
+            <p>Téléport derrière la cible + stun. En début de jeu on le spé <strong>lifesteal</strong>, pas dégâts.</p></div>
           </div>
           <div class="sk-card">
-            <span class="icbox"><svg class="ic" data-skill="whirlwind-slice"><use href="#i-whirl"/></svg></span>
-            <div><div class="h"><span class="nm">Whirlwind Slice</span><span class="goal">→ 12</span></div>
-            <p><strong>+50&nbsp;% de multi-hit</strong> et +20&nbsp;% de stun chance. À noter : Ambush a 50&nbsp;% de chance de le déclencher gratuitement.</p></div>
+            <span class="icbox"><svg class="ic" data-skill="shadow-fall"><use href="#i-shadowfall"/></svg></span>
+            <div><div class="h"><span class="nm">Shadow Fall</span><span class="goal">→ 12</span></div>
+            <p>Gros dégâts et <strong>10&nbsp;% de lifesteal</strong>. Un des meilleurs outils de survie du kit, à lâcher dès qu'il est up.</p></div>
           </div>
           <div class="sk-card">
-            <span class="icbox"><svg class="ic" data-skill="flash-slice"><use href="#i-flash"/></svg></span>
-            <div><div class="h"><span class="nm">Flash Slice</span><span class="goal">→ 12</span></div>
-            <p><strong>+40&nbsp;% de range</strong> et un cast consécutif en plus. Le blind est surtout un effet PvP, mais au Nv16 il inflige un stun de 3&nbsp;s sur cible aveuglée.</p></div>
+            <span class="icbox"><svg class="ic" data-skill="whirlwind-slash"><use href="#i-whirl"/></svg></span>
+            <div><div class="h"><span class="nm">Whirlwind Slash</span><span class="goal">→ 12</span></div>
+            <p>AoE en farm, multi-hit en mono-cible. Le skill qu'on re-spé le plus souvent selon le contenu.</p></div>
+          </div>
+          <div class="sk-card">
+            <span class="icbox"><svg class="ic" data-skill="flash-slash"><use href="#i-flash"/></svg></span>
+            <div><div class="h"><span class="nm">Flash Slash</span><span class="goal">→ 8</span></div>
+            <p>Traverse l'ennemi, applique un blind. Le blind est un effet PvP : en PvE on le spé <strong>dégâts multi-cibles</strong>.</p></div>
           </div>
           <div class="sk-card">
             <span class="icbox"><svg class="ic" data-skill="infiltrate"><use href="#i-infiltrate"/></svg></span>
-            <div><div class="h"><span class="nm">Infiltrate</span><span class="goal">→ 16</span></div>
-            <p><strong>+10&nbsp;m de range</strong> et +20&nbsp;% de blind chance. Le gap closer : en melee, réduire l'écart vaut plus que n'importe quel bonus de dégâts dessus.</p></div>
-          </div>
-          <div class="sk-card">
-            <span class="icbox"><svg class="ic" data-skill="storm-rampage"><use href="#i-storm"/></svg></span>
-            <div><div class="h"><span class="nm">Storm Rampage</span><span class="goal">→ 8, ou 16</span></div>
-            <p>Au niveau 8 il absorbe 5&nbsp;% des HP, et c'est tout. Le node qui compte, <strong>−1&nbsp;s sur tous les cooldowns à chaque hit</strong>, est marqué <strong>Nv16</strong> : en dessous, ce skill ne sert à rien (chapitre&nbsp;13).</p></div>
+            <div><div class="h"><span class="nm">Infiltrate</span><span class="goal">→ 8</span></div>
+            <p>Gap closer. On prend la <strong>range</strong> : en melee, réduire l'écart vaut plus que n'importe quel bonus de dégâts dessus.</p></div>
           </div>
           <div class="sk-card">
             <span class="icbox"><svg class="ic" data-skill="defiance"><use href="#i-guard"/></svg></span>
             <div><div class="h"><span class="nm">Defiance</span><span class="goal">→ 8</span></div>
-            <p>Le bouton panique : <strong>+50&nbsp;% de PvE damage tolerance</strong> pendant la durée de Tenacity. 3&nbsp;SP pour ça, c'est donné.</p></div>
-          </div>
-          <div class="sk-card">
-            <span class="icbox"><svg class="ic" data-skill="shadow-fall"><use href="#i-shadowfall"/></svg></span>
-            <div><div class="h"><span class="nm">Shadow Fall</span><span class="goal">→ 5</span></div>
-            <p>Gros dégâts bruts, et 1&nbsp;SP suffit. On le lâche dès qu'il est up, on ne l'optimise pas : ses nodes ne valent pas le budget.</p></div>
+            <p>Palier 8 uniquement, juste pour débloquer le gain de HP à l'usage.</p></div>
           </div>
         </div>
 
-        <h3><svg class="ic"><use href="#i-assault"/></svg>Les dix passifs</h3>
-        <p>Ils coûtent <strong>21 SP</strong> chacun, sauf Apply Poison à 17. Autant dire qu'on n'en monte pas dix. DocDany en isole trois qui pèsent bien plus lourd que les autres ; j'ai recoupé avec les dossiers KR et son classement tient.</p>
+        <h3><svg class="ic"><use href="#i-assault"/></svg>Les passifs : trois comptent, le reste suit</h3>
+        <p>Les passifs se financent avec les mêmes points que le reste. DocDany en isole trois qui pèsent bien plus lourd que les autres ; j'ai recoupé avec les dossiers KR et son classement tient.</p>
         <div class="pyr">
           <div class="tier t1">
             <div class="hd"><svg class="ic"><use href="#i-assault"/></svg><span class="nm">Les trois prioritaires</span><span class="mult">à monter direct</span></div>
-            <p class="lst"><span class="skl" data-skill="assault-stance"><svg class="ic" aria-hidden="true"><use href="#i-assault"/></svg><span class="n">Assault Stance</span></span> — 25&nbsp;% de chance à chaque crit de booster l'attaque de <strong>18&nbsp;% pendant 10&nbsp;s</strong>, donc en pratique up quasiment en permanence. <span class="skl" data-skill="exploit-weakness"><svg class="ic" aria-hidden="true"><use href="#i-crit"/></svg><span class="n">Exploit Weakness</span></span> — un pourcentage d'attaque par niveau, et c'est celui qu'Illusive Clone multiplie par 1,5. <span class="skl" data-skill="rear-smite"><svg class="ic" aria-hidden="true"><use href="#i-back"/></svg><span class="n">Rear Smite</span></span> — les dégâts par l'arrière, multiplié par 1,5 lui aussi, par Swift Contract.</p>
+            <p class="lst"><strong><span class="skl" data-skill="assault-stance"><svg class="ic" aria-hidden="true"><use href="#i-assault"/></svg><span class="n">Assault Stance</span></span></strong> — 25&nbsp;% de chance à chaque crit de booster l'attaque de <strong>18&nbsp;% pendant 10&nbsp;s</strong>, donc en pratique le buff est up quasiment en permanence. <strong>Le passif de damage boost</strong>, qui monte les dégâts en général puis spécifiquement en PvE : DocDany en tire ≈36&nbsp;% de PvE damage à lui seul. <strong>Le passif de crit damage</strong>, jusqu'à ≈35&nbsp;%.</p>
           </div>
-          <div class="arrow">le second rideau ↓</div>
+          <div class="arrow">montent tout seuls ↓</div>
           <div class="tier t2">
-            <div class="hd"><svg class="ic"><use href="#i-impact"/></svg><span class="nm">Les bons, sans urgence</span><span class="mult">au fil de l'eau</span></div>
-            <p class="lst"><span class="skl" data-skill="impact-hit"><svg class="ic" aria-hidden="true"><use href="#i-impact"/></svg><span class="n">Impact Hit</span></span> et <span class="skl" data-skill="ambush-stance"><svg class="ic" aria-hidden="true"><use href="#i-guard"/></svg><span class="n">Ambush Stance</span></span>, tous deux montés haut sur les feuilles endgame. <span class="skl" data-skill="determination"><svg class="ic" aria-hidden="true"><use href="#i-guard"/></svg><span class="n">Determination</span></span> et <span class="skl" data-skill="defense-break"><svg class="ic" aria-hidden="true"><use href="#i-guard"/></svg><span class="n">Defense Break</span></span>, bons mais jamais prioritaires.</p>
+            <div class="hd"><svg class="ic"><use href="#i-impact"/></svg><span class="nm">À laisser venir</span><span class="mult">sans forcer</span></div>
+            <p class="lst"><strong><span class="skl" data-skill="rear-smite"><svg class="ic" aria-hidden="true"><use href="#i-back"/></svg><span class="n">Rear Smite</span></span></strong>, excellent mais que le Daevanion alimente tout seul. <strong><span class="skl" data-skill="impact-hit"><svg class="ic" aria-hidden="true"><use href="#i-impact"/></svg><span class="n">Impact Hit</span></span></strong>, qui donne le double stun : à laisser monter naturellement, ne le poussez pas artificiellement. <strong><span class="skl" data-skill="defense-break"><svg class="ic" aria-hidden="true"><use href="#i-guard"/></svg><span class="n">Defense Break</span></span></strong>, bon mais pas prioritaire. Et le passif de <strong>dégâts sur boss à basse vie</strong>, qui monte seul et qui est très fort quand le groupe push après 50&nbsp;%.</p>
           </div>
           <div class="arrow">et pour survivre ↓</div>
           <div class="tier t3">
-            <div class="hd"><svg class="ic"><use href="#i-hp"/></svg><span class="nm">Survie et PvP</span><span class="mult">selon le contenu</span></div>
-            <p class="lst"><span class="skl" data-skill="heightened-sixth-sense"><svg class="ic" aria-hidden="true"><use href="#i-hp"/></svg><span class="n">Heightened Sixth Sense</span></span> puis <span class="skl" data-skill="revitalization-contract"><svg class="ic" aria-hidden="true"><use href="#i-hp"/></svg><span class="n">Revitalization Contract</span></span>, tant que vous apprenez les donjons. <span class="skl" data-skill="apply-poison"><svg class="ic" aria-hidden="true"><use href="#i-poison"/></svg><span class="n">Apply Poison</span></span> réduit les heals reçus par la cible : du PvP pur, et fait pour un heal adverse.</p>
+            <div class="hd"><svg class="ic" data-skill="sixth-sense"><use href="#i-hp"/></svg><span class="nm">Survie</span><span class="mult">le temps d'apprendre</span></div>
+            <p class="lst"><strong><span class="skl" data-skill="sixth-sense"><svg class="ic" aria-hidden="true"><use href="#i-hp"/></svg><span class="n">Sixth Sense</span></span></strong> (HP) avant <strong><span class="skl" data-skill="contract-of-revival"><svg class="ic" aria-hidden="true"><use href="#i-hp"/></svg><span class="n">Contract of Revival</span></span></strong> (rend ≈53&nbsp;% des HP max sous 10&nbsp;%). Il y a aussi un passif qui proc sur les skills de saut, <span class="skl" data-skill="ambush"><svg class="ic" aria-hidden="true"><use href="#i-ambush"/></svg><span class="n">Ambush</span></span> compris, et qui propose au choix des dégâts ou des HP : prenez <strong>HP</strong>, c'est de l'ordre de +20&nbsp;% de vie. À ne pas confondre avec la spé d'Ambush elle-même, qui va au lifesteal (chapitre&nbsp;6).</p>
           </div>
+        </div>
+
+        <div class="note ndlr">
+          <span class="lab n"><svg class="ic"><use href="#i-pvp"/></svg>Mon avis</span>
+          <p>La moitié du kit est du PvP pur : buff removal, shadow wall, airborne, retrait de CC, shadow step, et le poison qui réduit les heals reçus. Cooldowns d'une à deux minutes, aucun intérêt dans une barre PvE. Si vous hésitez devant un skill que je n'ai pas listé, regardez son CD : au-delà d'une minute, c'est presque toujours du PvP.</p>
         </div>
       </section>
 
@@ -903,8 +929,8 @@ nav.toc.desk{display:none;}
           <table>
             <thead><tr><th>Palier</th><th>Où vont les points</th><th>Pourquoi</th></tr></thead>
             <tbody>
-              <tr><td class="k"><svg class="ic" data-skill="quick-slice"><use href="#i-slash"/></svg>1 → 8</td><td><strong>Quick Slice</strong> en spé <strong>mana</strong>, puis <strong>Heart Gore</strong></td><td>Aux premiers niveaux vous ne manquez pas de dégâts, vous manquez de mana. La spé mana du filler règle ça d'un coup.</td></tr>
-              <tr><td class="k"><svg class="ic" data-skill="ambush"><use href="#i-ambush"/></svg>8 → 22</td><td>Palier 8 sur <strong>Ambush</strong> (lifesteal), <strong>Shadowstrike</strong> (crit damage), <strong>Heart Gore</strong> (HP), <strong>Shadow Fall</strong></td><td>Quatre skills au palier 8 et la boucle de farm est complète : on ouvre, on stack, on se heal en tapant.</td></tr>
+              <tr><td class="k"><svg class="ic" data-skill="quick-slash"><use href="#i-slash"/></svg>1 → 8</td><td><strong>Quick Slash</strong> en spé <strong>mana</strong>, puis <strong>Heart Gore</strong></td><td>Le problème n°1 des premiers niveaux n'est pas les dégâts, c'est la mana. La spé mana du filler règle ça d'un coup.</td></tr>
+              <tr><td class="k"><svg class="ic" data-skill="ambush"><use href="#i-ambush"/></svg>8 → 22</td><td>Palier 8 sur <strong>Ambush</strong> (lifesteal), <strong>Shadow Strike</strong> (crit damage), <strong>Heart Gore</strong> (HP), <strong>Shadow Fall</strong></td><td>Quatre skills au palier 8 et la boucle de farm est complète : on ouvre, on stack, on se heal en tapant.</td></tr>
               <tr><td class="k"><svg class="ic" data-skill="savage-roar"><use href="#i-fang"/></svg>22 → 32</td><td><strong>Savage Roar</strong> au niveau 10, puis <strong>Insignia Explosion</strong></td><td>Savage Roar est le skill le plus spammé : le monter à 10 est le meilleur rapport points/confort du leveling. Les expéditions ouvrent au 22.</td></tr>
               <tr><td class="k"><svg class="ic" data-skill="heart-gore"><use href="#i-heart"/></svg>32 → 45</td><td>Pousser <strong>Heart Gore</strong> vers 16</td><td>Le palier 16 et son reset au crit changent complètement le rythme de la classe. C'est l'objectif à atteindre le plus vite possible, avant tout le reste.</td></tr>
               <tr><td class="k"><svg class="ic"><use href="#i-node"/></svg>Au 45</td><td>Arcanes et Daevanion pour passer 16 → 20, puis les trois passifs</td><td>Les mastery points sont épuisés depuis longtemps. Tout ce qui monte encore vient des cartes et des nodes.</td></tr>
@@ -914,7 +940,7 @@ nav.toc.desk{display:none;}
 
         <h3><svg class="ic"><use href="#i-whirl"/></svg>La boucle de farm des premiers niveaux</h3>
         <div class="rota">
-          <div class="st"><div><b><span class="skl" data-skill="flash-slice"><svg class="ic" aria-hidden="true"><use href="#i-flash"/></svg><span class="n">Flash Slice</span></span> dans le pack</b><p>On traverse, on blind, et on se retrouve derrière : le pack tape moins fort et vous êtes déjà en position.</p></div></div>
+          <div class="st"><div><b><span class="skl" data-skill="flash-slash"><svg class="ic" aria-hidden="true"><use href="#i-flash"/></svg><span class="n">Flash Slash</span></span> dans le pack</b><p>On traverse, on blind, on ressort derrière. Du gain de dégâts avant même d'avoir tapé.</p></div></div>
           <div class="st"><div><b><span class="skl" data-skill="savage-roar"><svg class="ic" aria-hidden="true"><use href="#i-fang"/></svg><span class="n">Savage Roar</span></span> pour stack les runes</b><p>Le générateur. On stack pendant que les CD tournent.</p></div></div>
           <div class="st"><div><b><span class="skl" data-skill="insignia-explosion"><svg class="ic" aria-hidden="true"><use href="#i-rune"/></svg><span class="n">Insignia Explosion</span></span> sur le tas</b><p>Sur un pack correctement pull, c'est la différence entre trois secondes et douze.</p></div></div>
           <div class="st loop"><div><b><span class="skl" data-skill="heart-gore"><svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg><span class="n">Heart Gore</span></span> et auto-attacks en continu</b><p>C'est ce qui vous garde en vie. Au palier 16 les crits enchaînent les resets et vous ne vous arrêtez plus.</p></div></div>
@@ -930,197 +956,128 @@ nav.toc.desk{display:none;}
           <p>Optimiser du gear de transition. Vous recevrez une arme gold en fin de leveling, autour de l'iLevel&nbsp;57 : elle est nulle, et chaque kinah dessus est perdu. Pareil pour les manastones et les enchants sur des pièces que vous jetterez la semaine d'après. Le chapitre&nbsp;14 dit sur quoi se poser vraiment.</p>
         </div>
       </section>
-            <!-- ============ 6 ============ -->
+      <!-- ============ 6 ============ -->
       <section id="s6" class="rv">
-        <span class="sec-num"><svg class="ic"><use href="#i-node"/></svg>Chapitre 06 — Les nodes</span>
-        <h2 class="sec">Quels nodes prendre, skill par skill</h2>
-        <p class="sec-intro">Cinq options par skill, et le niveau décide de combien vous en activez : <strong>1 au niveau 8, 2 au niveau 12, 3 au niveau 20</strong>. Les effets ci-dessous sont les vrais libellés du client. <span class="mono">Point plein</span> = ce que je prends, <span class="mono">point creux</span> = ce que je laisse.</p>
+        <span class="sec-num"><svg class="ic"><use href="#i-node"/></svg>Chapitre 06 — Les spécialisations</span>
+        <h2 class="sec">Quelles spés prendre, et quand les changer</h2>
+        <p class="sec-intro">Trois choix sur cinq par skill. Le truc que presque tous les guides ratent : <strong>les bons choix au 45 fraîchement atteint ne sont pas ceux de fin de saison</strong>. Au début on prend de la survie, après on bascule sur les dégâts. Voilà les deux colonnes.</p>
 
-        <h3><svg class="ic"><use href="#i-star"/></svg>Les skills cœur, trois nodes chacun</h3>
-
-        <div class="nodecard">
-          <div class="nh"><span class="icbox gold"><svg class="ic" data-skill="heart-gore"><use href="#i-heart"/></svg></span><span class="nn">Heart Gore</span><span class="ng">3 nodes · niveau 20</span></div>
-          <div class="nodelist">
-            <div class="opt"><span class="dot"></span><span>Absorbs 1.5&nbsp;% HP on landing a Critical Hit</span></div>
-            <div class="opt on"><span class="dot"></span><span>Engraves 1 Insignia for 10s on hit</span></div>
-            <div class="opt on"><span class="dot"></span><span>Up to +20&nbsp;% Critical Hit when less targets hit</span></div>
-            <div class="opt"><span class="dot"></span><span>Guaranteed Multi-Hit on hit</span></div>
-            <div class="opt on"><span class="dot"></span><span>Resets [Heart Gore] cooldown on landing a Critical Hit</span></div>
-          </div>
-          <p class="nw">Le reset au crit est la raison d'être du skill, le +20&nbsp;% de crit le rend fiable, et l'Insignia alimente l'explosion. Le lifesteal fait envie tant qu'on n'a pas de gear, mais il saute dès que le heal suit.</p>
-        </div>
-
-        <div class="nodecard">
-          <div class="nh"><span class="icbox gold"><svg class="ic" data-skill="insignia-explosion"><use href="#i-rune"/></svg></span><span class="nn">Insignia Explosion</span><span class="ng">3 nodes · niveau 20</span></div>
-          <div class="nodelist">
-            <div class="opt"><span class="dot"></span><span>Adds rotate effect</span></div>
-            <div class="opt on"><span class="dot"></span><span>+50&nbsp;% Multi-Hit on hit</span></div>
-            <div class="opt on"><span class="dot"></span><span>Keep 2 stacks of Insignias after [Insignia Explosion]</span></div>
-            <div class="opt"><span class="dot"></span><span>+1s Stun duration</span></div>
-            <div class="opt on"><span class="dot"></span><span>−3s cooldown</span></div>
-          </div>
-          <p class="nw">Aucun débat sur celui-là. Le stun est du PvP, l'effet de rotation est anecdotique. Garder 2 stacks après l'explosion est le node qu'on sous-estime : la suivante repart avec deux stacks d'avance.</p>
-        </div>
-
-        <div class="nodecard">
-          <div class="nh"><span class="icbox gold"><svg class="ic" data-skill="quick-slice"><use href="#i-slash"/></svg></span><span class="nn">Quick Slice</span><span class="ng">3 nodes · niveau 20</span></div>
-          <div class="nodelist">
-            <div class="opt"><span class="dot"></span><span>+20&nbsp;% MP restored</span></div>
-            <div class="opt on"><span class="dot"></span><span>Absorbs 0.7&nbsp;% HP</span></div>
-            <div class="opt"><span class="dot"></span><span>+50&nbsp;% Multi-Hit on hit</span></div>
-            <div class="opt on"><span class="dot"></span><span>−1s [Insignia Explosion] cooldown on hit</span></div>
-            <div class="opt on"><span class="dot"></span><span>Ignores Block and Evasion and lands as Critical Hit</span></div>
-          </div>
-          <p class="nw">Le node MP est tentant au début — c'est même celui que je recommande pendant le leveling (chapitre&nbsp;5) — mais une fois gear il saute. Le −1&nbsp;s sur Insignia Explosion à chaque hit transforme le filler en pièce maîtresse.</p>
-        </div>
-
-        <div class="nodecard">
-          <div class="nh"><span class="icbox gold"><svg class="ic" data-skill="savage-roar"><use href="#i-fang"/></svg></span><span class="nn">Savage Roar</span><span class="ng">3 nodes · niveau 20</span></div>
-          <div class="nodelist">
-            <div class="opt"><span class="dot"></span><span>−20&nbsp;% MP consumed</span></div>
-            <div class="opt on"><span class="dot"></span><span>+20&nbsp;% Skill Speed</span></div>
-            <div class="opt on"><span class="dot"></span><span>Up to +12&nbsp;% damage when less targets hit</span></div>
-            <div class="opt on"><span class="dot"></span><span>−1s [Shadowstrike] cooldown on hit</span></div>
-            <div class="opt"><span class="dot"></span><span>Pulls nearby targets on using [Savage Smash]</span></div>
-          </div>
-          <p class="nw">Attention, je m'étais trompé dans une version précédente : le node de cooldown vise <strong>Shadowstrike</strong>, pas Ambush. Ça change la lecture — Savage Roar sert à faire revenir le buff de crit damage plus vite, pas le gap closer.</p>
-        </div>
-
-        <h3><svg class="ic"><use href="#i-swift"/></svg>Les skills de soutien, un ou deux nodes</h3>
         <div class="tw">
           <table>
-            <thead><tr><th>Skill</th><th>Ce que je prends</th><th>Ce que je laisse</th></tr></thead>
+            <thead><tr><th>Skill</th><th>Au début (peu de gear)</th><th>Plus tard (gear en place)</th></tr></thead>
             <tbody>
-              <tr>
-                <td class="k"><svg class="ic" data-skill="ambush"><use href="#i-ambush"/></svg>Ambush<br><span class="mono">2 nodes</span></td>
-                <td>Engraves 2 Insignias on back attack · Absorbs 3&nbsp;% HP</td>
-                <td>Breaks Protective Shields · 50&nbsp;% chance de déclencher Whirlwind Slice · +2 casts consécutifs <span class="mono">Nv16</span></td>
-              </tr>
-              <tr>
-                <td class="k"><svg class="ic" data-skill="shadowstrike"><use href="#i-shadowstrike"/></svg>Shadowstrike<br><span class="mono">2 nodes</span></td>
-                <td>+40&nbsp;% crit damage boost 5s · 50&nbsp;% Root 5s</td>
-                <td>+1s de stun · 50&nbsp;% Seal · passage en AoE <span class="mono">Nv16</span></td>
-              </tr>
-              <tr>
-                <td class="k"><svg class="ic" data-skill="whirlwind-slice"><use href="#i-whirl"/></svg>Whirlwind Slice<br><span class="mono">2 nodes</span></td>
-                <td>+50&nbsp;% Multi-Hit · +20&nbsp;% Stun Chance</td>
-                <td>Passage en AoE · +16&nbsp;m de range · reset sur esquive <span class="mono">Nv16</span></td>
-              </tr>
-              <tr>
-                <td class="k"><svg class="ic" data-skill="flash-slice"><use href="#i-flash"/></svg>Flash Slice<br><span class="mono">2 nodes</span></td>
-                <td>+40&nbsp;% Range · +1 cast consécutif</td>
-                <td>+2s de blind · +6&nbsp;m de range · stun sur cible aveuglée <span class="mono">Nv16</span></td>
-              </tr>
-              <tr>
-                <td class="k"><svg class="ic" data-skill="infiltrate"><use href="#i-infiltrate"/></svg>Infiltrate<br><span class="mono">2 nodes</span></td>
-                <td>+10&nbsp;m de range · +20&nbsp;% de blind chance</td>
-                <td>+300 stamina · brise les boucliers · chain skill [Dark Strike]</td>
-              </tr>
-              <tr>
-                <td class="k"><svg class="ic" data-skill="storm-rampage"><use href="#i-storm"/></svg>Storm Rampage<br><span class="mono">1 node</span></td>
-                <td>Absorbs 5&nbsp;% HP — et <strong>−1s sur tous les cooldowns</strong> si vous le montez au <span class="mono">Nv16</span></td>
-                <td>+120 MP · passage en skill mobile · multi-hit garanti <span class="mono">Nv12</span></td>
-              </tr>
-              <tr>
-                <td class="k"><svg class="ic" data-skill="defiance"><use href="#i-guard"/></svg>Defiance<br><span class="mono">1 node</span></td>
-                <td>+50&nbsp;% PvE damage tolerance pendant Tenacity</td>
-                <td>+1000 stamina · +20&nbsp;% HP au cast · reset 25&nbsp;% <span class="mono">Nv16</span></td>
-              </tr>
+              <tr><td class="k"><svg class="ic" data-skill="quick-slash"><use href="#i-slash"/></svg>Quick Slash</td><td><strong>Mana</strong> — le vrai problème du début</td><td>Lifesteal, ou +50 multi-hit si vous n'avez plus besoin de vous heal</td></tr>
+              <tr><td class="k"><svg class="ic" data-skill="heart-gore"><use href="#i-heart"/></svg>Heart Gore</td><td><strong>HP</strong> — vous prenez cher partout</td><td>Crit, multi-hit et skill cooldown</td></tr>
+              <tr><td class="k"><svg class="ic" data-skill="ambush"><use href="#i-ambush"/></svg>Ambush</td><td><strong>Lifesteal</strong> — la classe vit dessus</td><td>Crit damage boost</td></tr>
+              <tr><td class="k"><svg class="ic" data-skill="storm-rampage"><use href="#i-storm"/></svg>Storm Rampage</td><td><strong>Lifesteal</strong></td><td>Skill cooldown (palier 16 obligatoire, voir ch.&nbsp;13)</td></tr>
+              <tr><td class="k"><svg class="ic" data-skill="shadow-strike"><use href="#i-shadowstrike"/></svg>Shadow Strike</td><td colspan="2"><strong>Crit damage boost</strong> dans tous les cas — c'est le buff qui ouvre la rota, le reste de ses spés est anecdotique.</td></tr>
+              <tr><td class="k"><svg class="ic" data-skill="insignia-explosion"><use href="#i-rune"/></svg>Insignia Explosion</td><td colspan="2"><strong>Multi-hit</strong>, toujours. Les spés « garder les stacks » et « stun » sont du PvP : en PvE on ne veut pas stun, on veut taper plus fort.</td></tr>
+              <tr><td class="k"><svg class="ic" data-skill="savage-roar"><use href="#i-fang"/></svg>Savage Roar</td><td colspan="2"><strong>Skill speed</strong> en build général (≈30&nbsp;%). Mana consumption si vous négligez vos auto-attacks. Dégâts purs sur les boss mono-cible type Nightmare.</td></tr>
+              <tr><td class="k"><svg class="ic" data-skill="whirlwind-slash"><use href="#i-whirl"/></svg>Whirlwind Slash</td><td colspan="2"><strong>AoE</strong> en farm, <strong>multi-hit</strong> en mono-cible.</td></tr>
+              <tr><td class="k"><svg class="ic" data-skill="flash-slash"><use href="#i-flash"/></svg>Flash Slash</td><td colspan="2"><strong>Dégâts multi-cibles</strong>. La durée du blind ne sert qu'en PvP.</td></tr>
+              <tr><td class="k"><svg class="ic" data-skill="infiltrate"><use href="#i-infiltrate"/></svg>Infiltrate</td><td colspan="2"><strong>Range</strong> (jusqu'à +10&nbsp;m) et récup de ressource. Fixe.</td></tr>
+              <tr><td class="k"><svg class="ic" data-skill="shadow-fall"><use href="#i-shadowfall"/></svg>Shadow Fall</td><td colspan="2"><strong>Lifesteal 10&nbsp;%</strong>. On le lâche dès qu'il est up, on ne l'optimise pas.</td></tr>
             </tbody>
           </table>
         </div>
 
         <div class="note gold">
-          <span class="lab g"><svg class="ic"><use href="#i-cooldown"/></svg>Le fil rouge de tout ce chapitre</span>
-          <p>Regardez ce que les nodes rognent : Quick Slice enlève 1&nbsp;s à Insignia Explosion, Savage Roar 1&nbsp;s à Shadowstrike, Storm Rampage 1&nbsp;s à tout, Insignia Explosion 3&nbsp;s à elle-même. <strong>La classe est construite autour de la réduction de cooldown</strong>, et c'est exactement pour ça que l'arbitrage du chapitre&nbsp;9 entre smite et CDR est un vrai débat et pas une évidence.</p>
+          <span class="lab g"><svg class="ic"><use href="#i-cooldown"/></svg>Le seul arbitrage à refaire régulièrement</span>
+          <p>Sur <span class="skl" data-skill="heart-gore"><svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg><span class="n">Heart Gore</span></span> monté haut, vous devrez choisir entre garder les <strong>HP</strong> ou le <strong>multi-hit</strong>. La règle de DocDany est simple et je la reprends telle quelle : <strong>Nightmare et donjons solo → HP</strong> (personne ne vous heal), <strong>contenu de groupe → multi-hit</strong> (le heal fait son taf, prenez les dégâts). Deux clics, plusieurs pour cent.</p>
         </div>
 
-        <div class="note trap">
-          <span class="lab"><svg class="ic"><use href="#i-warn"/></svg>Le piège des nodes marqués Nv12 et Nv16</span>
-          <p>Certains nodes n'apparaissent qu'à partir d'un niveau de skill précis, même si vous avez un slot libre. C'est pour ça qu'un Storm Rampage à 14 ne vaut rien alors qu'à 16 il devient un des meilleurs boutons du kit : le node qui compte n'existait pas encore.</p>
+        <h3><svg class="ic"><use href="#i-book"/></svg>Les numéros, pour ceux qui suivent les dossiers KR</h3>
+        <p>Les guides coréens désignent les spés par leur position dans la liste du client. Voilà les combos qu'ils recoupent, à titre indicatif — rien ne garantit que la loc FR garde cet ordre. <span class="mono">Violet plein</span> = mon choix par défaut, <span class="mono">violet clair</span> = l'alternative.</p>
+        <div class="speclist">
+          <div class="sp">
+            <div><div class="nm"><svg class="ic" data-skill="insignia-explosion"><use href="#i-rune"/></svg>Insignia Explosion</div><span class="lv">objectif 20</span></div>
+            <div class="pips"><span>1</span><span class="on">2</span><span class="on">3</span><span>4</span><span class="on">5</span></div>
+            <div class="why">Là-dessus tous les dossiers KR que j'ai lus disent la même chose.</div>
+          </div>
+          <div class="sp">
+            <div><div class="nm"><svg class="ic" data-skill="heart-gore"><use href="#i-heart"/></svg>Heart Gore</div><span class="lv">objectif 20</span></div>
+            <div class="pips"><span class="alt">1</span><span class="on">2</span><span class="alt">3</span><span class="on">4</span><span class="on">5</span></div>
+            <div class="why"><strong>2/4/5</strong> par défaut, <strong>3/4/5</strong> tant que le crit est bas — le reset au crit ne vaut rien si le crit ne tombe pas.</div>
+          </div>
+          <div class="sp">
+            <div><div class="nm"><svg class="ic" data-skill="quick-slash"><use href="#i-slash"/></svg>Quick Slash</div><span class="lv">objectif 20</span></div>
+            <div class="pips"><span>1</span><span class="on">2</span><span class="on">3</span><span class="on">4</span><span class="alt">5</span></div>
+            <div class="why">La <strong>4</strong> réduit le CD d'Insignia Explosion. C'est elle qui justifie le skill.</div>
+          </div>
+          <div class="sp">
+            <div><div class="nm"><svg class="ic" data-skill="savage-roar"><use href="#i-fang"/></svg>Savage Roar</div><span class="lv">objectif 20</span></div>
+            <div class="pips"><span>1</span><span class="on">2</span><span class="on">3</span><span class="on">4</span><span>5</span></div>
+            <div class="why">La <strong>4</strong> réduit le CD d'Ambush, ce qui resserre toute la boucle.</div>
+          </div>
+          <div class="sp">
+            <div><div class="nm"><svg class="ic" data-skill="ambush"><use href="#i-ambush"/></svg>Ambush</div><span class="lv">palier 8, puis 12</span></div>
+            <div class="pips"><span>1</span><span class="on">2</span><span>3</span><span class="alt">4</span><span class="on">5</span></div>
+            <div class="why"><strong>2 et 5</strong>, puis <strong>2/4/5</strong> si vous le montez haut. Rappel : au début, la ligne lifesteal prime sur la ligne dégâts.</div>
+          </div>
+          <div class="sp">
+            <div><div class="nm"><svg class="ic" data-skill="whirlwind-slash"><use href="#i-whirl"/></svg>Whirlwind Slash</div><span class="lv">niveau 12</span></div>
+            <div class="pips"><span class="on">1</span><span class="alt">2</span><span class="alt">3</span><span>4</span><span class="on">5</span></div>
+            <div class="why">La <strong>1</strong> est obligatoire (+50&nbsp;% de multi-hit). Ensuite <strong>2</strong> pour les packs, <strong>3</strong> pour la range de 16&nbsp;m.</div>
+          </div>
+          <div class="sp">
+            <div><div class="nm"><svg class="ic" data-skill="storm-rampage"><use href="#i-storm"/></svg>Storm Rampage</div><span class="lv">palier 16 impératif</span></div>
+            <div class="pips"><span class="alt">1</span><span>2</span><span>3</span><span class="on">4</span><span class="on">5</span></div>
+            <div class="why"><strong>4/5</strong> quand le boss n'a pas de debuff à gérer, <strong>1/5</strong> sinon.</div>
+          </div>
+        </div>
+
+        <div class="note">
+          <span class="lab a"><svg class="ic"><use href="#i-eye"/></svg>Si les numéros ne collent pas au client FR</span>
+          <p>Cherchez l'<strong>effet</strong>, pas le numéro : reset de CD au crit, lifesteal, multi-hit, réduction du CD d'un autre skill, back attack damage. Ce sont ces cinq familles qu'on veut, dans cet ordre, quel que soit le rang affiché.</p>
         </div>
       </section>
 
       <!-- ============ 7 ============ -->
       <section id="s7" class="rv">
         <span class="sec-num"><svg class="ic"><use href="#i-clone"/></svg>Chapitre 07 — Les stigmas</span>
-        <h2 class="sec">Quatre slots, treize candidats</h2>
-        <p class="sec-intro">Le chapitre où il faut trancher. Il existe <strong>treize stigmas</strong> ; ce qui change en globale, c'est le nombre qu'on peut <strong>équiper</strong> — quatre au lieu de cinq en Asie. Le build de référence en monte cinq, à 75 gemmes chacun. Il va donc falloir en couper un, et je sais lequel.</p>
+        <h2 class="sec">Quatre slots, douze candidats</h2>
+        <p class="sec-intro">Le vrai arbitrage du guide. Les douze stigmas existent tous ; ce qui change en globale, c'est le nombre qu'on peut <strong>équiper</strong> — quatre au lieu de cinq ou six en Asie. Tous les builds que vous trouverez sont donc à recouper, et il faut sacrifier. Voilà ma coupe, et pourquoi.</p>
+        <p class="sec-intro">Deux choses à savoir avant d'entrer dedans, relevées en jeu pendant la bêta.<span class="bta">vu en bêta</span> Le panneau de stigma ne s'ouvre qu'au <strong>niveau 22</strong>, par la quête &laquo;&nbsp;À l'écoute des voix&nbsp;&raquo;, donc rien de ce chapitre ne vous concerne avant. Et chaque stigma porte <strong>quatre nodes automatiques</strong>, aux niveaux <strong>5, 10, 15 et 20</strong>, ce qui explique pourquoi tous les ordres de montée ci-dessous s'arrêtent sur ces chiffres-là.</p>
 
-        <h3><svg class="ic"><use href="#i-star"/></svg>Les cinq du build de référence, dans l'ordre de priorité</h3>
-        <div class="stigbar">
-          <div class="sl"><span class="n"><svg class="ic" data-skill="swift-contract"><use href="#i-swift"/></svg>Prio 1</span><span class="t">Swift Contract</span><span class="s">x1,5 sur deux passifs</span></div>
-          <div class="sl"><span class="n"><svg class="ic" data-skill="illusive-clone"><use href="#i-clone"/></svg>Prio 2</span><span class="t">Illusive Clone</span><span class="s">x1,5 Exploit Weakness</span></div>
-          <div class="sl"><span class="n"><svg class="ic" data-skill="triniels-dagger"><use href="#i-cooldown"/></svg>Prio 3</span><span class="t">Triniel's Dagger</span><span class="s">−10&nbsp;% de CD par hit</span></div>
-          <div class="sl"><span class="n"><svg class="ic" data-skill="savage-fang"><use href="#i-fang"/></svg>Prio 4</span><span class="t">Savage Fang</span><span class="s">+10&nbsp;% PvE damage, stagger</span></div>
-          <div class="sl off"><span class="n"><svg class="ic" data-skill="throw-shadowblade"><use href="#i-throw"/></svg>Prio 5 — coupé</span><span class="t">Throw Shadowblade</span><span class="s">Le sacrifié de la globale</span></div>
+        
+        <div class="note">
+          <span class="lab a"><svg class="ic"><use href="#i-swift"/></svg>Swift Contract, relev&eacute; en jeu</span>
+          <p>Le seul stigma que j'ai pu ouvrir pendant le test, et il vaut le d&eacute;tour. Le sort de base donne <strong>+20&nbsp;% de vitesse de combat pendant 10&nbsp;s</strong>, lan&ccedil;able en d&eacute;placement, sur un cooldown d'<strong>une minute</strong>. Ce sont ses quatre nodes qui changent la lecture du chapitre.</p>
+          <div class="tw">
+            <table>
+              <thead><tr><th scope="col">Niveau</th><th scope="col">Ce que le node ajoute</th><th scope="col">Ce que &ccedil;a vaut</th></tr></thead>
+              <tbody>
+                <tr><td class="k">5</td><td>Co&ucirc;t en MP r&eacute;duit de 20&nbsp;% pendant la dur&eacute;e</td><td>Du confort, rien de plus. C'est le palier o&ugrave; tout le monde s'arr&ecirc;te au d&eacute;but.</td></tr>
+                <tr><td class="k">10</td><td>L'effet du coup par l'arri&egrave;re pass&eacute; &agrave; <strong>&times;1,5</strong></td><td>Votre passif de backstab, multipli&eacute; pendant la fen&ecirc;tre. C'est d&eacute;j&agrave; une raison de monter &agrave; 10 avant le reste.</td></tr>
+                <tr><td class="k">15</td><td><span class="skl" data-skill="assault-stance"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-assault"/></svg><span class="n">Assault Stance</span></span> pass&eacute; &agrave; <strong>&times;1,5</strong> pendant la dur&eacute;e</td><td>Le node le plus important du stigma, et la surprise du test. Assault Stance est le premier passif du chapitre&nbsp;4, celui qui est up presque en permanence.</td></tr>
+                <tr><td class="k">20</td><td>+10&nbsp;% de vitesse de combat suppl&eacute;mentaire</td><td>Le palier de finition, cumulable avec les 20&nbsp;% de base.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Deux cons&eacute;quences pratiques. Le <strong>15</strong> devient un vrai objectif et pas un palier de passage, ce qui rapproche l'ordre de DocDany de celui des dossiers KR. Et la synchro avec <span class="skl" data-skill="illusion-clone"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-clone"/></svg><span class="n">Illusion Clone</span></span> prend un sens de plus, puisque la fen&ecirc;tre de 10&nbsp;s porte d&eacute;sormais un multiplicateur sur deux passifs au lieu d'un buff sec.</p>
+          <p>Une r&eacute;serve d'honn&ecirc;tet&eacute;. Le libell&eacute; fran&ccedil;ais du node&nbsp;10 parle d'un &laquo;&nbsp;coup puissant arri&egrave;re&nbsp;&raquo;, que je rattache &agrave; <span class="skl" data-skill="rear-smite"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-back"/></svg><span class="n">Rear Smite</span></span> dans ma nomenclature. C'est le seul rapprochement de ce tableau dont je ne suis pas certain &agrave; 100&nbsp;%.</p>
         </div>
+
+        <h3><svg class="ic"><use href="#i-star"/></svg>Mon build PvE par défaut</h3>
+        <div class="stigbar">
+          <div class="sl"><span class="n"><svg class="ic" data-skill="illusion-clone"><use href="#i-clone"/></svg>Slot 1</span><span class="t">Illusion Clone</span><span class="s">Le cœur du DPS</span></div>
+          <div class="sl"><span class="n"><svg class="ic" data-skill="swift-contract"><use href="#i-swift"/></svg>Slot 2</span><span class="t">Swift Contract</span><span class="s">Buff, synchro avec le clone</span></div>
+          <div class="sl"><span class="n"><svg class="ic" data-skill="triniels-dagger"><use href="#i-cooldown"/></svg>Slot 3</span><span class="t">Triniel's Dagger</span><span class="s">−10&nbsp;% de CD par hit</span></div>
+          <div class="sl"><span class="n"><svg class="ic" data-skill="savage-fang"><use href="#i-fang"/></svg>Slot 4</span><span class="t">Savage Fang</span><span class="s">+10&nbsp;% damage boost, stagger</span></div>
+        </div>
+        <p class="capt">Et les deux que je laisse de côté faute de slot — ils existent, mais il faudrait sacrifier un des quatre :</p>
+        <div class="stigbar">
+          <div class="sl off"><span class="n"><svg class="ic" data-skill="evasion-stance"><use href="#i-evade"/></svg>Hors des quatre</span><span class="t">Evasion Stance</span><span class="s">Bloque et garde le corps à corps</span></div>
+          <div class="sl off"><span class="n"><svg class="ic" data-skill="throw-shadowblade"><use href="#i-throw"/></svg>Hors des quatre</span><span class="t">Throw Shadowblade</span><span class="s">20&nbsp;m, reset sur les kills</span></div>
+        </div>
+
+        <h3><svg class="ic" data-skill="illusion-clone"><use href="#i-clone"/></svg>Pourquoi ces quatre-là</h3>
+        <p><strong><span class="skl" data-skill="illusion-clone"><svg class="ic" aria-hidden="true"><use href="#i-clone"/></svg><span class="n">Illusion Clone</span></span></strong> est le pivot de la classe. Quand son buff est up, <span class="skl" data-skill="heart-gore"><svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg><span class="n">Heart Gore</span></span> — qui se reset normalement sur crit avec 5&nbsp;s de CD — voit ce cooldown <strong>disparaître</strong> : on le spam en boucle tant que les crits tombent. Le clone reproduit vos attaques, donc il peut déclencher ce reset même quand votre propre coup n'a pas crit. À 5 il rallonge le buff de 2&nbsp;s, à 10 il ajoute <strong>+20&nbsp;% de dégâts</strong>.</p>
+        <p><strong><span class="skl" data-skill="swift-contract"><svg class="ic" aria-hidden="true"><use href="#i-swift"/></svg><span class="n">Swift Contract</span></span></strong> est le buff d'attack speed, à lâcher dans la même seconde. <strong><span class="skl" data-skill="triniels-dagger"><svg class="ic" aria-hidden="true"><use href="#i-cooldown"/></svg><span class="n">Triniel's Dagger</span></span></strong> rabote <strong>10&nbsp;% de CD à chaque hit</strong>, ce qui fait revenir la fenêtre plus souvent — c'est elle qui rend les trois autres jouables ensemble. <strong><span class="skl" data-skill="savage-fang"><svg class="ic" aria-hidden="true"><use href="#i-fang"/></svg><span class="n">Savage Fang</span></span></strong> enfin, je le prends surtout pour son <strong>+10&nbsp;% de damage boost</strong> et pour le stagger. Cerise sur le gâteau, il pose tout seul les cinq stacks d'Insignia Explosion, ce qui en fait l'outil d'opener parfait.</p>
 
         <div class="note gold">
-          <span class="lab g"><svg class="ic"><use href="#i-scale"/></svg>Le calcul est fait pour nous</span>
-          <p>Le build de référence liste ses cinq stigmas par ordre de montée au niveau 20 : <strong>Swift Contract, Illusive Clone, Triniel's Dagger, Savage Fang, Throw Shadowblade</strong>. Avec quatre slots, on coupe le dernier de la liste. Mes quatre du chapitre précédent sortent donc confirmés, et l'ordre de montée aussi — c'est le seul endroit du guide où je n'ai pas eu à arbitrer moi-même.</p>
-        </div>
-
-        <h3><svg class="ic"><use href="#i-clone"/></svg>Le détail de leurs nodes</h3>
-        <p>Et là il y a une révélation que je n'avais nulle part dans mes sources écrites : <strong>vos deux buffs ne font pas que buffer, ils multiplient vos passifs</strong>. Ça explique l'ordre de priorité, et ça justifie de monter les trois passifs du chapitre&nbsp;4 avant tout le reste.</p>
-        <div class="nodecard">
-          <div class="nh"><span class="icbox"><svg class="ic" data-skill="swift-contract"><use href="#i-swift"/></svg></span><span class="nn">Swift Contract</span><span class="ng">prio 1 · 75 gemmes</span></div>
-          <div class="nodelist">
-            <div class="opt on"><span class="dot"></span><span>−20&nbsp;% MP Cost pendant la durée</span></div>
-            <div class="opt on"><span class="dot"></span><span><strong>x1.5 [Rear Smite]</strong> pendant la durée</span></div>
-            <div class="opt on"><span class="dot"></span><span><strong>x1.5 [Assault Stance]</strong> pendant la durée</span></div>
-            <div class="opt on"><span class="dot"></span><span>+10&nbsp;% Combat Speed</span></div>
-          </div>
-          <p class="nw">Multiplier par 1,5 vos dégâts par l'arrière <em>et</em> votre buff d'attaque, en même temps. Voilà pourquoi c'est le numéro un et pas « le buff d'attack speed ».</p>
-        </div>
-        <div class="nodecard">
-          <div class="nh"><span class="icbox"><svg class="ic" data-skill="illusive-clone"><use href="#i-clone"/></svg></span><span class="nn">Illusive Clone</span><span class="ng">prio 2 · 75 gemmes</span></div>
-          <div class="nodelist">
-            <div class="opt on"><span class="dot"></span><span>+10&nbsp;% Status Effect Chance pendant la durée</span></div>
-            <div class="opt on"><span class="dot"></span><span>+20 Critical Damage Boost pendant la durée</span></div>
-            <div class="opt on"><span class="dot"></span><span><strong>x1.5 [Exploit Weakness]</strong> pendant la durée</span></div>
-            <div class="opt on"><span class="dot"></span><span>−30s de cooldown</span></div>
-          </div>
-          <p class="nw">Le troisième passif multiplié, plus du crit damage. Et le −30&nbsp;s de cooldown rend l'uptime du chapitre&nbsp;9 atteignable.</p>
-        </div>
-        <div class="nodecard">
-          <div class="nh"><span class="icbox"><svg class="ic" data-skill="triniels-dagger"><use href="#i-cooldown"/></svg></span><span class="nn">Triniel's Dagger</span><span class="ng">prio 3 · 75 gemmes</span></div>
-          <div class="nodelist">
-            <div class="opt on"><span class="dot"></span><span>Devient un skill mobile</span></div>
-            <div class="opt on"><span class="dot"></span><span><strong>−10&nbsp;% sur tous les cooldowns à chaque hit</strong></span></div>
-            <div class="opt on"><span class="dot"></span><span>Reset son cooldown en achevant une cible avec elle</span></div>
-            <div class="opt on"><span class="dot"></span><span>+3&nbsp;% sur tous les cooldowns</span></div>
-          </div>
-          <p class="nw">Le −10&nbsp;% par hit profite à tout le kit. C'est le stigma le moins spectaculaire et celui qui fait le plus tourner la machine.</p>
-        </div>
-        <div class="nodecard">
-          <div class="nh"><span class="icbox"><svg class="ic" data-skill="savage-fang"><use href="#i-fang"/></svg></span><span class="nn">Savage Fang</span><span class="ng">prio 4 · 75 gemmes</span></div>
-          <div class="nodelist">
-            <div class="opt on"><span class="dot"></span><span>Jusqu'à +20&nbsp;% de dégâts quand il touche plus de cibles</span></div>
-            <div class="opt on"><span class="dot"></span><span>+50 de dégâts sur la jauge de stagger</span></div>
-            <div class="opt on"><span class="dot"></span><span><strong>+10&nbsp;% PvE Damage Boost</strong> et +5&nbsp;% PvP pendant 10s</span></div>
-            <div class="opt on"><span class="dot"></span><span>Critical Hit garanti</span></div>
-          </div>
-          <p class="nw">Le +10&nbsp;% de PvE damage pendant 10&nbsp;s le fait rentrer dans l'opener, et les +50 de stagger servent à casser les boss plus vite.</p>
-        </div>
-
-        <h3><svg class="ic"><use href="#i-evade"/></svg>Les huit autres</h3>
-        <p class="capt">Aucun n'est monté sur le build de référence. Autant savoir ce qu'on écarte :</p>
-        <div class="tw">
-          <table>
-            <thead><tr><th>Candidat</th><th>Rôle</th><th>Pourquoi il reste sur le banc</th></tr></thead>
-            <tbody>
-              <tr><td class="k"><svg class="ic" data-skill="throw-shadowblade"><use href="#i-throw"/></svg>Throw Shadowblade</td><td>Ranged, reset sur les kills, crit garanti, passage en AoE</td><td>Le seul vrai regret. Cinquième priorité, donc le sacrifié de nos quatre slots. Il revient en PvP.</td></tr>
-              <tr><td class="k"><svg class="ic" data-skill="evasion-stance"><use href="#i-evade"/></svg>Evasion Stance</td><td>Parade : bloque le coup et garde le corps à corps</td><td>Le premier que je rentre si je meurs en donjon. Voir les variantes plus bas.</td></tr>
-              <tr><td class="k"><svg class="ic" data-skill="smoke-bomb"><use href="#i-smoke"/></svg>Smoke Bomb</td><td>Blind, cooldown court, dégâts corrects</td><td>Bon rapport qualité-prix mais niveau&nbsp;1 suffit : il ne justifie pas un slot.</td></tr>
-              <tr><td class="k"><svg class="ic" data-skill="spiral-slice"><use href="#i-whirl"/></svg>Spiral Slice</td><td>Dégâts, animation courte</td><td>Le filler quand il reste un slot à remplir. Avec quatre, il n'en reste jamais.</td></tr>
-              <tr><td class="k"><svg class="ic" data-skill="shadow-walk"><use href="#i-eye"/></svg>Shadow Walk</td><td>Passe furtif en plein combat</td><td>PvP pur.</td></tr>
-              <tr><td class="k"><svg class="ic" data-skill="shadowstep"><use href="#i-infiltrate"/></svg>Shadowstep</td><td>Frappe puis se planque, toujours en combat</td><td>PvP pur.</td></tr>
-              <tr><td class="k"><svg class="ic" data-skill="aerial-bind"><use href="#i-assault"/></svg>Aerial Bind</td><td>Projection, du CC en plus</td><td>2&nbsp;min de cooldown et peu de dégâts.</td></tr>
-              <tr><td class="k"><svg class="ic" data-skill="evasion-contract"><use href="#i-evade"/></svg>Evasion Contract</td><td>Retire les CC, monte l'évasion et l'immunité</td><td>PvP.</td></tr>
-              <tr><td class="k"><svg class="ic" data-skill="assault-ambush"><use href="#i-ambush"/></svg>Assault Ambush</td><td>Le gap closer offensif commun aux classes melee</td><td>2&nbsp;min de cooldown, beaucoup trop long pour du PvE.</td></tr>
-            </tbody>
-          </table>
+          <span class="lab g"><svg class="ic"><use href="#i-cooldown"/></svg>L'objectif de fond</span>
+          <p>Tout ce chapitre vise une seule chose : <strong>maximiser l'uptime</strong>. Un Assassin bien réglé reste sous <span class="skl" data-skill="illusion-clone"><svg class="ic" aria-hidden="true"><use href="#i-clone"/></svg><span class="n">Illusion Clone</span></span> la majeure partie du combat sur une cible qui ne bouge pas. Chaque point de CDR rapproche de cet état, et c'est pour ça que le chapitre&nbsp;9 consacre une section entière à l'arbitrage CDR contre smite.</p>
         </div>
 
         <h3><svg class="ic"><use href="#i-evade"/></svg>Les variantes</h3>
@@ -1128,28 +1085,34 @@ nav.toc.desk{display:none;}
           <table>
             <thead><tr><th>Situation</th><th>On sort</th><th>On met</th><th>Pourquoi</th></tr></thead>
             <tbody>
-              <tr><td class="k">Vous mourez en donjon</td><td>Savage Fang</td><td>Evasion Stance</td><td>Elle permet de rester au corps à corps au lieu de reculer, donc de continuer à taper. Un Assassin qui recule ne tape plus, autant dire qu'il est mort.</td></tr>
-              <tr><td class="k">Boss à grosse attaque melee</td><td>Savage Fang</td><td>Evasion Stance</td><td>aLuckyRO la recommande spécifiquement au Fire Temple et sur le premier boss du Deus Research Lab.</td></tr>
-              <tr><td class="k">PvP / Abîme</td><td>Savage Fang</td><td>Throw Shadowblade</td><td>Il reprend sa place naturelle : ranged, reset sur les kills, crit garanti.</td></tr>
+              <tr><td class="k">Vous mourez en donjon</td><td>Savage Fang</td><td>Evasion Stance</td><td>Elle permet de rester au corps à corps au lieu de reculer, donc de continuer à taper. Un Assassin qui recule ne tape plus, et ça revient au même que s'il était mort.</td></tr>
+              <tr><td class="k">Boss à grosse attaque melee</td><td>Savage Fang</td><td>Evasion Stance</td><td>Elle bloque le coup. aLuckyRO la recommande spécifiquement au Fire Temple et sur le premier boss du Deus Research Lab.</td></tr>
+              <tr><td class="k">PvP / Abîme</td><td>Savage Fang</td><td>Throw Shadowblade</td><td>20&nbsp;m avec slow, et elle reset quand vous achevez une cible.</td></tr>
             </tbody>
           </table>
         </div>
-        <p>C'est toujours le même slot qui bouge. Les trois premiers ne se négocient pas : ils portent les multiplicateurs de passifs et le CDR, et en retirer un affaiblit les deux autres.</p>
+        <p>Vous remarquerez que c'est toujours le même slot qui bouge. Les trois premiers ne se négocient pas : ils forment la fenêtre de burst, et en retirer un casse les deux autres.</p>
 
-        <h3><svg class="ic"><use href="#i-scale"/></svg>Dans quel ordre les monter</h3>
-        <p>La priorité de fin de course est donnée plus haut. Reste la question du début de saison, quand les shards manquent — et là mes sources ne sont pas d'accord.</p>
+        <h3><svg class="ic"><use href="#i-scale"/></svg>Dans quel ordre les monter : trois écoles</h3>
+        <p>C'est là que mes sources divergent le plus franchement, et les trois se défendent. Je les donne toutes parce que le bon choix dépend de l'étape où vous êtes.</p>
         <div class="cmp cmp3">
           <div class="row">
             <div class="q">L'ordre</div>
-            <div class="c"><span class="who">aLuckyRO · tout début</span>Ce qui donne des dégâts tout de suite, sans seuil : Throw Shadowblade et Savage Fang à <strong>10</strong>. Triniel's Dagger et Illusive Clone laissés à <strong>1</strong>, leurs seuils étant trop chers pour le budget du moment.</div>
-            <div class="c"><span class="who">DocDany · progression</span>Triniel's Dagger à <strong>10</strong> d'abord, le reste à <strong>5</strong>. Puis les deux buffs en alternance : 10 et 10, 15 et 15, puis 20 et 20.</div>
-            <div class="c"><span class="who">Build de référence · fin</span>Swift Contract, Illusive Clone, Triniel's Dagger, Savage Fang, chacun à <strong>20</strong>, dans cet ordre.</div>
+            <div class="c"><span class="who">aLuckyRO · tout début</span>Throw Shadowblade <strong>+10</strong>, Savage Fang <strong>+10</strong>, puis Swift Contract. Triniel's Dagger et Illusion Clone laissés à <strong>1</strong>, leurs seuils étant trop chers pour le budget du moment.</div>
+            <div class="c"><span class="who">DocDany · progression</span>Triniel's Dagger à <strong>10</strong> d'abord, tout le reste à <strong>5</strong>. Ensuite les deux buffs en alternance : 10 et 10, puis 15 et 15, puis Illusion Clone à 20 et Swift Contract à 20. Triniel's Dagger à 20 en dernier.</div>
+            <div class="c"><span class="who">Dossiers KR · endgame</span>Illusion Clone au cap avant tout, puis Swift Contract, puis Triniel's Dagger, puis Savage Fang. La logique des guides endgame, quand les shards ne sont plus la contrainte.</div>
+          </div>
+          <div class="row">
+            <div class="q">La logique</div>
+            <div class="c"><span class="who">aLuckyRO · tout début</span>Avec très peu de shards, on prend ce qui donne des dégâts <strong>tout de suite</strong>, sans seuil à franchir. Le clone ne vaut rien tant que Heart Gore n'est pas au palier 16.</div>
+            <div class="c"><span class="who">DocDany · progression</span>Le −10&nbsp;% de CD de Triniel's Dagger s'active à 10 et profite à <strong>tout</strong> le kit. On paie le seuil le moins cher qui améliore le plus de choses, puis on monte les deux buffs ensemble pour qu'ils ne se désynchronisent pas.</div>
+            <div class="c"><span class="who">Dossiers KR · endgame</span>Le clone est le plus gros multiplicateur de la classe. Une fois les autres seuils passés, tout va dedans.</div>
           </div>
         </div>
 
         <div class="note ndlr">
           <span class="lab n"><svg class="ic"><use href="#i-book"/></svg>Mon avis</span>
-          <p>Je pars sur DocDany pour la montée et sur le build de référence pour la finition, et les deux se rejoignent mieux que je ne le pensais. <strong>Triniel's Dagger à 10 en premier</strong> : c'est le seuil le moins cher, il débloque le −10&nbsp;% de cooldown, et ce cooldown fait revenir les deux buffs plus souvent. Ensuite Swift Contract et Illusive Clone montés ensemble, parce que perdre un des deux multiplicateurs de passifs revient à jouer avec un demi-burst. aLuckyRO a raison sur le tout début — le clone ne sert à rien tant que Heart Gore n'est pas au palier 16 — mais son plan s'appuie sur Throw Shadowblade, qui est justement le stigma qu'on n'aura pas la place d'équiper.</p>
+          <p>Je pars sur l'école du milieu, celle de DocDany. <strong><span class="skl" data-skill="triniels-dagger"><svg class="ic" aria-hidden="true"><use href="#i-cooldown"/></svg><span class="n">Triniel's Dagger</span></span> à 10 en premier</strong>, c'est le seuil le moins cher qui améliore tout le reste, puis les deux buffs montés ensemble. aLuckyRO a raison sur un point — <span class="skl" data-skill="illusion-clone"><svg class="ic" aria-hidden="true"><use href="#i-clone"/></svg><span class="n">Illusion Clone</span></span> ne sert pas à grand-chose tant que <span class="skl" data-skill="heart-gore"><svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg><span class="n">Heart Gore</span></span> n'est pas au palier&nbsp;16 — mais son plan s'appuie sur deux stigmas qui risquent de ne pas rentrer dans nos quatre slots. Quant à l'école endgame, elle décrit un perso qu'on n'aura pas avant des mois.</p>
         </div>
       </section>
 
@@ -1173,7 +1136,7 @@ nav.toc.desk{display:none;}
 
         <div class="note trap">
           <span class="lab"><svg class="ic"><use href="#i-warn"/></svg>Ce qu'on ne prend surtout pas au lancement</span>
-          <p>La <strong>défense</strong>, les <strong>résistances</strong>, la <strong>damage tolerance</strong>, l'<strong>evasion</strong>, et — contre-intuitivement — le <strong>CDR du Daevanion</strong>. Sur un perso de début de saison ces nodes ne changent rien de mesurable : ils coûtent des points que vous n'avez pas et ne débloquent aucun palier. C'est la reco d'aLuckyRO et elle est catégorique.</p>
+          <p>La <strong>défense</strong>, les <strong>résistances</strong>, la <strong>damage tolerance</strong>, l'<strong>evasion</strong>, et — contre-intuitivement — le <strong>CDR du Daevanion</strong>. Sur un perso de début de saison ces nodes ne changent rien de mesurable : ils coûtent des points que vous n'avez pas et ne déplacent aucun seuil. C'est la reco d'aLuckyRO et elle est catégorique.</p>
         </div>
 
         <h3><svg class="ic"><use href="#i-node"/></svg>L'ordre de dépense</h3>
@@ -1200,8 +1163,8 @@ nav.toc.desk{display:none;}
 
         <h3><svg class="ic"><use href="#i-smite"/></svg>Le smite, d'abord</h3>
         <div class="note gold">
-          <span class="lab g"><svg class="ic"><use href="#i-smite"/></svg>Le smite, mécaniquement</span>
-          <p>C'est une <strong>chance de proc qui double les dégâts du skill</strong>, pas un simple bonus. Voilà pourquoi c'est la meilleure stat du jeu toutes classes confondues. Attention quand même : passé un certain niveau de contenu, <strong>les boss ont du smite resist</strong>, ce qui cappe naturellement son rendement.</p>
+          <span class="lab g"><svg class="ic"><use href="#i-smite"/></svg>Ce que fait vraiment le smite</span>
+          <p>Ce n'est pas un bonus de dégâts : c'est une <strong>chance de proc qui double les dégâts du skill</strong>. Voilà pourquoi c'est la meilleure stat du jeu toutes classes confondues. Attention quand même : passé un certain niveau de contenu, <strong>les boss ont du smite resist</strong>, ce qui cappe naturellement son rendement.</p>
         </div>
 
         <h3><svg class="ic"><use href="#i-back"/></svg>La stat signature de la classe</h3>
@@ -1213,7 +1176,7 @@ nav.toc.desk{display:none;}
           <div class="arrow">puis, sous cap ↓</div>
           <div class="tier t2">
             <div class="hd"><svg class="ic"><use href="#i-target"/></svg><span class="nm">Accuracy et crit</span><span class="mult">cappés</span></div>
-            <p class="lst">L'accuracy vous garantit de <strong>toucher les boss</strong>, et elle est cappée par le contenu : au-delà du cap du raid en cours, chaque point est perdu. Le crit est cappé selon votre gear. Ce sont les deux seules stats qu'il faut mesurer au lieu d'empiler.</p>
+            <p class="lst">L'accuracy est ce qui vous permet de <strong>toucher les boss</strong> tout le temps, et elle est cappée par le contenu : au-delà du cap du raid en cours, chaque point est perdu. Le crit est cappé selon votre gear. Ce sont les deux seules stats qu'il faut mesurer au lieu d'empiler.</p>
           </div>
           <div class="arrow">puis ↓</div>
           <div class="tier t3">
@@ -1224,12 +1187,12 @@ nav.toc.desk{display:none;}
         <p>Détail de confort qui compte en donjon : <strong>votre move speed est réduite de moitié en combat</strong>. C'est une des raisons pour lesquelles les skills de repositionnement pèsent autant chez l'Assassin.</p>
 
         <h3><svg class="ic"><use href="#i-scale"/></svg>Le grand arbitrage : smite ou CDR</h3>
-        <p>Deux stats du Panthéon s'opposent, et c'est le choix de build qui divise le plus. <strong>Wisdom</strong> donne du smite en pourcentage, <strong>Illusion</strong> donne du CDR. On retrouve les deux mêmes stats sur les cartes d'arcane (chapitre&nbsp;10), ce qui double l'enjeu : les points sont les mêmes, les tableaux sont les mêmes, et il faut trancher.</p>
+        <p>Deux stats du Panthéon s'opposent, et c'est le vrai choix de build de la classe. <strong>Wisdom</strong> donne du smite en pourcentage, <strong>Illusion</strong> donne du CDR. On retrouve les deux mêmes stats sur les cartes d'arcane (chapitre&nbsp;10), ce qui double l'enjeu : les points sont les mêmes, les tableaux sont les mêmes, et il faut trancher.</p>
         <div class="dial">
           <div class="bar"><div class="l"><svg class="ic"><use href="#i-smite"/></svg>Wisdom / smite</div><div class="r">Illusion / CDR<svg class="ic"><use href="#i-cooldown"/></svg></div></div>
           <div class="ends">
             <div><b>L'école des dégâts purs</b>Tout en Wisdom. Chaque coup tape plus fort, le smite proc plus souvent, et on accepte des fenêtres de burst plus espacées. C'est le build le plus répandu.</div>
-            <div><b>L'école de l'uptime</b>On sacrifie une dizaine de points de smite pour monter le CDR. Résultat mesuré par DocDany : <strong>42&nbsp;% de CDR</strong>, 15 à 20&nbsp;% d'uptime en plus, et jusqu'à 95&nbsp;% du combat sous Illusive Clone sur un boss statique.</div>
+            <div><b>L'école de l'uptime</b>On sacrifie une dizaine de points de smite pour monter le CDR. Résultat mesuré par DocDany : <strong>42&nbsp;% de CDR</strong>, 15 à 20&nbsp;% d'uptime en plus, et jusqu'à 95&nbsp;% du combat sous Illusion Clone sur un boss statique.</div>
           </div>
         </div>
         <p>Concrètement DocDany tourne à environ <span class="mono">160</span> de Wisdom et <span class="mono">140</span> d'Illusion là où il pourrait monter à 180 de Wisdom. Ça lui coûte du smite — il est à ≈66&nbsp;% quand d'autres montent à 75&nbsp;% — mais il burst bien plus souvent. Son principe : <strong>aucun tableau de Panthéon sans Wisdom <em>et</em> Illusion dessus</strong>, au lieu de tout empiler sur une seule stat.</p>
@@ -1252,13 +1215,13 @@ nav.toc.desk{display:none;}
           <div><dt>Anneaux</dt><dd>Attaque, puis les paliers de skills</dd></div>
           <div><dt>Boucles &amp; collier</dt><dd>Les trois passifs : attaque et accuracy</dd></div>
         </dl>
-        <p>Sur les anneaux, visez un <strong>palier</strong> plutôt qu'une stat : un « +1 » qui fait passer <span class="skl" data-skill="heart-gore"><svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg><span class="n">Heart Gore</span></span> de 15 à 16 vaut plus que n'importe quelle ligne d'attaque. Et sur les manastones, mon ordre est <strong>back attack boost</strong> (si le placement suit), puis weapon damage boost, puis crit damage, puis attaque, puis damage boost. Et sur le slot ouvert à la pierre philosophale — le seul qui ne se transfère pas quand vous changez de pièce — mettez votre <strong>plus mauvaise</strong> ligne, typiquement l'attaque brute.</p>
+        <p>Sur les anneaux, on ne cherche pas une stat mais un <strong>palier</strong> : un « +1 » qui fait passer <span class="skl" data-skill="heart-gore"><svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg><span class="n">Heart Gore</span></span> de 15 à 16 vaut plus que n'importe quelle ligne d'attaque. Et sur les manastones, mon ordre est <strong>back attack boost</strong> (si le placement suit), puis weapon damage boost, puis crit damage, puis attaque, puis damage boost. Et sur le slot ouvert à la pierre philosophale — le seul qui ne se transfère pas quand vous changez de pièce — mettez votre <strong>plus mauvaise</strong> ligne, typiquement l'attaque brute.</p>
       </section>
       <!-- ============ 10 ============ -->
       <section id="s10" class="rv">
         <span class="sec-num"><svg class="ic"><use href="#i-book"/></svg>Chapitre 10 — Arcanes, Panthéon, titres</span>
         <h2 class="sec">Les trois systèmes de fond</h2>
-        <p class="sec-intro">Trois chantiers qui ne se voient pas dans une barre de skills mais qui pèsent lourd sur la feuille de perso. Les arcanes portent vos niveaux au-delà de 10, le Panthéon porte l'arbitrage du chapitre précédent, et les titres sont un gain gratuit que presque personne ne va chercher.</p>
+        <p class="sec-intro">Trois chantiers qui ne se voient pas dans une barre de skills mais qui pèsent lourd sur la feuille de perso. Les arcanes portent vos niveaux au-delà de 10, le Panthéon porte l'arbitrage du chapitre précédent, et les titres sont probablement le gain gratuit le plus négligé du jeu.</p>
 
         <h3><svg class="ic"><use href="#i-book"/></svg>Les cartes d'arcane</h3>
         <p>Chaque famille de cartes porte un type d'effet. Pour un Assassin, la répartition que DocDany recommande et que je reprends :</p>
@@ -1266,7 +1229,7 @@ nav.toc.desk{display:none;}
           <table>
             <thead><tr><th>Famille</th><th>Ce qu'on y met</th><th>Remarque</th></tr></thead>
             <tbody>
-              <tr><td class="k"><svg class="ic"><use href="#i-book"/></svg>Parchemin</td><td>Savage Roar, Insignia Explosion, Quick Slice</td><td>Vos skills actifs cœur.</td></tr>
+              <tr><td class="k"><svg class="ic"><use href="#i-book"/></svg>Parchemin</td><td>Savage Roar, Insignia Explosion, Quick Slash</td><td>Vos skills actifs cœur.</td></tr>
               <tr><td class="k"><svg class="ic"><use href="#i-target"/></svg>Boussole</td><td>Savage Roar en priorité, sinon Storm Rampage</td><td>Les autres options sont nettement moins importantes.</td></tr>
               <tr><td class="k"><svg class="ic" data-skill="assault-stance"><use href="#i-assault"/></svg>Cloche</td><td>Que des passifs — <strong>Assault Stance</strong> avant tout</td><td>Le reste des passifs de la cloche est secondaire.</td></tr>
               <tr><td class="k"><svg class="ic" data-skill="rear-smite"><use href="#i-back"/></svg>Miroir</td><td>Passifs : <strong>Rear Smite</strong>, <strong>Impact Hit</strong></td><td>Le miroir en porte plusieurs et ils sont tous corrects.</td></tr>
@@ -1287,7 +1250,7 @@ nav.toc.desk{display:none;}
         <p>C'est un chantier long et il n'a pas besoin d'être parfait pour être rentable : posez les tableaux au fil de l'eau, remplacez les plus faibles quand vous trouvez mieux, et ne cherchez pas l'optimum avant plusieurs mois.</p>
         <p>Côté <strong>ailes</strong>, la référence chez les Assassins ce sont les <strong>Talisra</strong> : ≈4&nbsp;% de CDR plus un bonus d'attaque. Des ailes plus récentes existent côté KR avec du back attack, ce qui en fait une alternative cohérente si vous partez sur l'école du smite pur.</p>
 
-        <h3><svg class="ic"><use href="#i-star"/></svg>Les titres, que presque personne ne va chercher</h3>
+        <h3><svg class="ic"><use href="#i-star"/></svg>Les titres, le gain gratuit que personne ne va chercher</h3>
         <p>Deux setups, l'un accessible en fin de leveling, l'autre à farm sur la durée. Trois slots à chaque fois : offensif, défensif, utilitaire. Les noms ci-dessous sont ceux qui circulent en anglais ou traduits du coréen — comme pour le reste du kit, repérez-les à leur condition de déblocage plutôt qu'à leur nom.</p>
         <div class="tw">
           <table>
@@ -1340,7 +1303,7 @@ nav.toc.desk{display:none;}
         </div>
         <div class="note trap">
           <span class="lab"><svg class="ic"><use href="#i-warn"/></svg>Le piège des nodes</span>
-          <p>Lock une ligne avant le <strong>niveau 10</strong> de l'arbre. Le coût des rerolls explose ensuite et vous payez une fortune pour corriger un lock posé trop tôt sur une valeur moyenne. Montez les cinq arbres au 10 d'abord — ça débloque en prime Unbound by Genus, le meilleur titre offensif — et lockez après.</p>
+          <p>Lock une ligne avant le <strong>niveau 10</strong> de l'arbre. Le coût des rerolls explose ensuite et vous payez une fortune pour corriger un lock posé trop tôt sur une valeur moyenne. Montez les cinq arbres au 10 d'abord — ça débloque en prime le meilleur titre offensif du jeu — et lockez après.</p>
         </div>
       </section>
 
@@ -1348,34 +1311,33 @@ nav.toc.desk{display:none;}
       <section id="s12" class="rv">
         <span class="sec-num"><svg class="ic"><use href="#i-macro"/></svg>Chapitre 12 — La macro</span>
         <h2 class="sec">La macro Assassin, ligne par ligne</h2>
-        <p class="sec-intro">DocDany dit que l'Assassin a <strong>la macro la plus compliquée du jeu</strong>, et après avoir monté la mienne je confirme. Ce n'est pas là pour jouer à votre place : c'est l'outil qui annule les animations et enchaîne les skills plus vite qu'une main ne le peut. Sans macro correcte, la classe perd une grosse part de ses dégâts.</p>
+        <p class="sec-intro">DocDany dit que l'Assassin a <strong>la macro la plus compliquée du jeu</strong>, et après avoir monté la mienne je confirme. Ce n'est pas de l'automatisation pour jouer moins. C'est l'outil qui annule les animations et enchaîne les skills plus vite qu'une main ne le peut. Sans macro correcte, la classe perd une grosse part de ses dégâts.</p>
 
         <h3><svg class="ic"><use href="#i-gear"/></svg>Où ça se règle</h3>
         <p>Paramètres → réglages des touches → descendre jusqu'à la section gameplay → assigner une touche à la macro. Ensuite on ajoute les lignes et on choisit la barre de skills qui sera jouée. Une pression maintenue lance la séquence.</p>
 
         <h3><svg class="ic"><use href="#i-macro"/></svg>L'ordre des lignes, et pourquoi</h3>
         <div class="macro">
-          <div class="ln"><span class="k">1</span><span class="icbox aether"><svg class="ic" data-skill="shadowstrike"><use href="#i-shadowstrike"/></svg></span><div><b><span class="skl" data-skill="shadowstrike"><svg class="ic" aria-hidden="true"><use href="#i-shadowstrike"/></svg><span class="n">Shadowstrike</span></span></b><p>Le buff de crit damage. Il
-             open, ce qui suit doit taper dedans.</p></div></div>
+          <div class="ln"><span class="k">1</span><span class="icbox aether"><svg class="ic" data-skill="shadow-strike"><use href="#i-shadowstrike"/></svg></span><div><b><span class="skl" data-skill="shadow-strike"><svg class="ic" aria-hidden="true"><use href="#i-shadowstrike"/></svg><span class="n">Shadow Strike</span></span></b><p>Le buff de crit damage. Il ouvre tout : ce qui suit doit taper dedans.</p></div></div>
           <div class="ln"><span class="k">2</span><span class="icbox"><svg class="ic" data-skill="triniels-dagger"><use href="#i-cooldown"/></svg></span><div><b><span class="skl" data-skill="triniels-dagger"><svg class="ic" aria-hidden="true"><use href="#i-cooldown"/></svg><span class="n">Triniel's Dagger</span></span></b><p>Placée tôt parce qu'elle réduit vos CD et qu'elle a de gros dégâts de base. On la veut dès qu'elle est up.</p></div></div>
           <div class="ln"><span class="k">3</span><span class="icbox gold"><svg class="ic" data-skill="insignia-explosion"><use href="#i-rune"/></svg></span><div><b><span class="skl" data-skill="insignia-explosion"><svg class="ic" aria-hidden="true"><use href="#i-rune"/></svg><span class="n">Insignia Explosion</span></span> — avant <span class="skl" data-skill="heart-gore"><svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg><span class="n">Heart Gore</span></span></b><p>Le point contre-intuitif. En plein burst, <span class="skl" data-skill="heart-gore"><svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg><span class="n">Heart Gore</span></span> se reset en boucle et monopoliserait la macro, si bien que l'explosion ne partirait jamais. Or elle tape presque trois fois plus fort par coup. Elle passe donc devant.</p></div></div>
           <div class="ln"><span class="k">4</span><span class="icbox gold"><svg class="ic" data-skill="heart-gore"><use href="#i-heart"/></svg></span><div><b><span class="skl" data-skill="heart-gore"><svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg><span class="n">Heart Gore</span></span></b><p>Votre skill de DPS soutenu. Il remplit tout l'espace que les autres laissent.</p></div></div>
-          <div class="ln"><span class="k">5</span><span class="icbox"><svg class="ic" data-skill="savage-fang"><use href="#i-fang"/></svg></span><div><b><span class="skl" data-skill="savage-fang"><svg class="ic" aria-hidden="true"><use href="#i-fang"/></svg><span class="n">Savage Fang</span></span>, en dernier</b><p>En fin de séquence il ne proc que lorsque vous n'êtes <em>pas</em> en burst — exactement ce qu'on veut : un peu de dégâts en plus et une réduction du CD de <span class="skl" data-skill="shadowstrike"><svg class="ic" aria-hidden="true"><use href="#i-shadowstrike"/></svg><span class="n">Shadowstrike</span></span>.</p></div></div>
+          <div class="ln"><span class="k">5</span><span class="icbox"><svg class="ic" data-skill="savage-fang"><use href="#i-fang"/></svg></span><div><b><span class="skl" data-skill="savage-fang"><svg class="ic" aria-hidden="true"><use href="#i-fang"/></svg><span class="n">Savage Fang</span></span>, en dernier</b><p>En fin de séquence il ne proc que lorsque vous n'êtes <em>pas</em> en burst — exactement ce qu'on veut : un peu de dégâts en plus et une réduction du CD de <span class="skl" data-skill="shadow-strike"><svg class="ic" aria-hidden="true"><use href="#i-shadowstrike"/></svg><span class="n">Shadow Strike</span></span>.</p></div></div>
         </div>
         <p>Si vous jouez en <strong>action combat</strong>, ajoutez une ligne d'auto-attack au milieu de la séquence : sans elle le perso s'arrête après chaque skill et la mana ne remonte jamais. En <strong>tab-target</strong>, ne la mettez pas : le jeu relance l'auto-attack tout seul dans les trous, une ligne de plus ne ferait que diluer la macro.</p>
 
-        <h3><svg class="ic"><use href="#i-speed"/></svg>Le delay, et pourquoi il décide de tout</h3>
+        <h3><svg class="ic"><use href="#i-speed"/></svg>Le réglage qui compte vraiment : le delay</h3>
         <div class="note gold">
           <span class="lab g"><svg class="ic"><use href="#i-speed"/></svg>Calez le delay sur votre ping</span>
           <p>Le delay entre deux lignes dépend de votre latence, et c'est lui qui décide si la macro <strong>annule les animations</strong> ou si elle les subit. Sous 50&nbsp;ms de ping : <strong>10&nbsp;ms</strong> de delay. À 80&nbsp;ms et plus : <strong>40 à 50&nbsp;ms</strong>. Le repère visuel donné par aLuckyRO : quand le delay est bon, vous voyez les ombres apparaître sur votre perso pendant l'enchaînement. Retestez après chaque changement notable de combat speed ou de CDR, les timings ne collent plus.</p>
         </div>
 
         <h3><svg class="ic"><use href="#i-heart"/></svg>Ce qui reste manuel</h3>
-        <p>Une macro bien réglée ne joue pas à votre place. Deux choses restent manuelles. D'abord le <strong>spam manuel de <span class="skl" data-skill="heart-gore"><svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg><span class="n">Heart Gore</span></span></strong> pendant la fenêtre d'Illusive Clone : en tapant sa touche à la main vous lui donnez la priorité sur la macro et vous exploitez les resets en chaîne. Quand le buff tombe, vous relâchez et la macro reprend seule.</p>
+        <p>Une macro bien réglée ne joue pas à votre place. Deux choses restent dans vos mains. D'abord le <strong>spam manuel de <span class="skl" data-skill="heart-gore"><svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg><span class="n">Heart Gore</span></span></strong> pendant la fenêtre d'Illusion Clone : en tapant sa touche à la main vous lui donnez la priorité sur la macro et vous exploitez les resets en chaîne. Quand le buff tombe, vous relâchez et la macro reprend seule.</p>
         <p>Ensuite <strong><span class="skl" data-skill="storm-rampage"><svg class="ic" aria-hidden="true"><use href="#i-storm"/></svg><span class="n">Storm Rampage</span></span></strong>, qui ne se joue jamais en auto — voir l'encadré du chapitre suivant. Et bien sûr tous les déplacements et les défensifs.</p>
         <div class="note trap">
           <span class="lab"><svg class="ic"><use href="#i-warn"/></svg>La limite à connaître</span>
-          <p>Le nombre de lignes est limité, et une macro Assassin bien remplie laisse peu de place — DocDany n'a même pas de cinquième case pour sa <span class="skl" data-skill="smoke-bomb"><svg class="ic" aria-hidden="true"><use href="#i-smoke"/></svg><span class="n">Smoke Bomb</span></span>. Ne cherchez pas à y mettre un skill utilitaire « au cas où » : chaque ligne parasite retarde vos quatre skills de dégâts.</p>
+          <p>Le nombre de lignes est limité, et une macro Assassin bien remplie laisse peu de place — DocDany n'a même pas de cinquième case pour sa smoke bomb. Ne cherchez pas à y mettre un skill utilitaire « au cas où » : chaque ligne parasite retarde vos quatre skills de dégâts.</p>
         </div>
       </section>
 
@@ -1388,13 +1350,13 @@ nav.toc.desk{display:none;}
         <h3><svg class="ic"><use href="#i-flash"/></svg>L'opener</h3>
         <div class="rota">
           <div class="st"><div><b>Arriver avec ses CD prêts</b><p>Le prérequis que personne ne mentionne : votre burst doit être up <em>au début</em> du combat. Ne le cramez pas sur les adds juste avant le boss.</p></div></div>
-          <div class="st"><div><b>Les deux buffs</b><p><span class="skl" data-skill="illusive-clone"><svg class="ic" aria-hidden="true"><use href="#i-clone"/></svg><span class="n">Illusive Clone</span></span> et <span class="skl" data-skill="swift-contract"><svg class="ic" aria-hidden="true"><use href="#i-swift"/></svg><span class="n">Swift Contract</span></span>, dans la même seconde, avant d'engager.</p></div></div>
+          <div class="st"><div><b>Les deux buffs</b><p><span class="skl" data-skill="illusion-clone"><svg class="ic" aria-hidden="true"><use href="#i-clone"/></svg><span class="n">Illusion Clone</span></span> et <span class="skl" data-skill="swift-contract"><svg class="ic" aria-hidden="true"><use href="#i-swift"/></svg><span class="n">Swift Contract</span></span>, dans la même seconde, avant d'engager.</p></div></div>
           <div class="st"><div><b>Backstab</b><p>On se place derrière avant, pas pendant. Et on garde un outil de déplacement en réserve pour quand le boss pivotera.</p></div></div>
-          <div class="st"><div><b><span class="skl" data-skill="savage-fang"><svg class="ic" aria-hidden="true"><use href="#i-fang"/></svg><span class="n">Savage Fang</span></span></b><p>Trois effets d'un coup : le damage boost, le stagger, et surtout il pose <strong>automatiquement les cinq stacks</strong> d'Insignia Explosion. Vous entrez donc dans la macro avec l'explosion déjà chargée.</p></div></div>
+          <div class="st"><div><b><span class="skl" data-skill="savage-fang"><svg class="ic" aria-hidden="true"><use href="#i-fang"/></svg><span class="n">Savage Fang</span></span></b><p>Trois effets d'un coup : le damage boost, le stagger, et surtout il pose <strong>automatiquement les cinq stacks</strong> d'Insignia Explosion. C'est ce qui permet d'entrer dans la macro avec l'explosion déjà chargée.</p></div></div>
           <div class="st loop"><div><b>Puis la macro</b><p>Et pendant toute la durée du buff, spam <span class="skl" data-skill="heart-gore"><svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg><span class="n">Heart Gore</span></span> à la main pour exploiter les resets.</p></div></div>
         </div>
 
-        <h3><svg class="ic" data-skill="storm-rampage"><use href="#i-storm"/></svg>Storm Rampage : celui que tout le monde joue de travers</h3>
+        <h3><svg class="ic" data-skill="storm-rampage"><use href="#i-storm"/></svg>Storm Rampage : le skill le plus mal joué de la classe</h3>
         <div class="note gold">
           <span class="lab g"><svg class="ic"><use href="#i-storm"/></svg>Les trois règles</span>
           <p><strong>Un :</strong> s'il n'est pas au <strong>niveau 16</strong>, ne l'utilisez pas du tout — vous perdez plus de DPS à le lancer qu'à l'ignorer. <strong>Deux :</strong> ne le lancez jamais sur un boss qui est en train de mourir, c'est du cooldown jeté. <strong>Trois :</strong> le bon moment, c'est vers la moitié de la barre du boss, juste après un burst ou pendant : il efface les CD de vos buffs, vous burstez deux fois plus longtemps, et sur certains boss vous ne sortez plus de la fenêtre. Utilisé là, DocDany le décrit comme « absolument broken », et après l'avoir testé je ne peux qu'être d'accord.</p>
@@ -1402,16 +1364,16 @@ nav.toc.desk{display:none;}
         <p>Le corollaire : si le boss entre en break et que votre burst est déjà up ou le sera dans les cinq secondes, ne faites rien de spécial — tapez normalement avec la macro, ça se passera très bien.</p>
 
         <h3><svg class="ic"><use href="#i-infiltrate"/></svg>Les déplacements, ou comment ne pas gâcher un outil</h3>
-        <p>Vous avez quatre outils de repositionnement et ils n'ont pas le même rôle. Le <strong>court</strong> sert à se replacer quand le boss se retourne, ou à recoller après un dash. Les deux <strong>longs</strong>, de l'ordre de 18 et 20&nbsp;m, servent à revenir au contact après une méca — attention, l'un des deux vous fait sortir du combat. Enfin le <strong>backstab</strong> a deux usages qui s'excluent : booster vos crits via sa spé, ou <strong>follow le boss</strong> quand il se téléporte.</p>
+        <p>Vous avez quatre outils de repositionnement et ils n'ont pas le même rôle. Le <strong>court</strong> sert à se replacer quand le boss se retourne, ou à recoller après un dash. Les deux <strong>longs</strong>, de l'ordre de 18 et 20&nbsp;m, servent à revenir au contact après une méca, l'un d'eux vous sortant du combat. Enfin le <strong>backstab</strong> a deux usages qui s'excluent : booster vos crits via sa spé, ou <strong>follow le boss</strong> quand il se téléporte.</p>
         <div class="note">
           <span class="lab a"><svg class="ic"><use href="#i-target"/></svg>Ma règle de décision</span>
           <p>Sur un boss statique, je dépense le backstab pour les dégâts. Sur un boss qui bouge beaucoup, <strong>je le garde uniquement pour le follow</strong>. Perdre trois secondes à courir derrière un boss coûte bien plus que le bonus de crit gagné.</p>
         </div>
 
-        <h3><svg class="ic"><use href="#i-eye"/></svg>L'indicateur de dos</h3>
+        <h3><svg class="ic"><use href="#i-eye"/></svg>Le réglage qui rapporte le plus de DPS</h3>
         <div class="note gold">
-          <span class="lab g"><svg class="ic"><use href="#i-eye"/></svg>À activer dès la première connexion</span>
-          <p>Le jeu propose un indicateur qui dit si vous êtes réellement dans le dos de la cible. Activez-le : <strong>il a toujours raison, même quand le boss a l'air de regarder ailleurs</strong>. Le modèle 3D peut tourner sans que la hitbox suive. Il ne coûte rien et je ne connais pas de réglage qui rapporte autant.</p>
+          <span class="lab g"><svg class="ic"><use href="#i-eye"/></svg>L'indicateur de dos</span>
+          <p>Le jeu propose un indicateur qui dit si vous êtes réellement dans le dos de la cible. Activez-le : <strong>il a toujours raison, même quand le boss a l'air de regarder ailleurs</strong>. Le modèle 3D peut tourner sans que la hitbox suive. C'est probablement le réglage le plus rentable de toute cette page et il ne coûte rien.</p>
         </div>
         <p>Activez aussi le <strong>suivi automatique</strong> à l'utilisation des skills : le perso se déplace pour se mettre à portée au lieu d'annuler le cast.</p>
 
@@ -1419,21 +1381,21 @@ nav.toc.desk{display:none;}
         <ol>
           <li><strong>Vous ratez.</strong> Vérifiez l'accuracy contre le contenu que vous faites : première cause, et la plus invisible.</li>
           <li><strong>Votre uptime dans le dos est plus bas que vous ne croyez.</strong> Mettez l'indicateur et mesurez sur un combat entier.</li>
-          <li><strong>Vos deux buffs ont dérivé.</strong> S'ils ne partent plus dans la même seconde, vous burstez avec un buff sur deux.</li>
+          <li><strong>Vos deux buffs ont dérivé.</strong> S'ils ne partent plus ensemble, la fenêtre se vide.</li>
           <li><strong>Le delay de macro n'est pas calé sur votre ping.</strong> Pas d'ombres à l'écran = pas d'animation cancel.</li>
           <li><strong>Vous lancez <span class="skl" data-skill="storm-rampage"><svg class="ic" aria-hidden="true"><use href="#i-storm"/></svg><span class="n">Storm Rampage</span></span> n'importe quand</strong>, ou sous le niveau 16.</li>
           <li><strong>Vous ne spammez pas <span class="skl" data-skill="heart-gore"><svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg><span class="n">Heart Gore</span></span> pendant le buff</strong> et vous laissez la macro décider à votre place.</li>
           <li><strong>Vous êtes au-dessus du cap de crit ou d'accuracy.</strong> Chaque point au-delà est perdu.</li>
-          <li><strong>Votre combat power monte mais pas vos paliers.</strong> Le chiffre de la feuille de perso grossit sans qu'aucun node ne s'ouvre.</li>
-          <li><strong>Vous portez encore des spés de survie</strong> alors que votre gear encaisse tout seul depuis longtemps.</li>
-          <li><strong>Vous avez réglé vos stats pendant qu'un Chanter vous buffait.</strong> Recommencez sans lui.</li>
+          <li><strong>Votre combat power monte mais pas vos paliers.</strong> Vous gagnez du combat power sans franchir un seul palier.</li>
+          <li><strong>Vous portez encore des spés de survie</strong> dont votre gear vous a dispensé depuis longtemps.</li>
+          <li><strong>Vous vous êtes réglé sous le buff d'un Chanter.</strong> Refaites vos calculs à nu.</li>
         </ol>
       </section>
       <!-- ============ 14 ============ -->
       <section id="s14" class="rv">
         <span class="sec-num"><svg class="ic"><use href="#i-gear"/></svg>Chapitre 14 — Le gear</span>
         <h2 class="sec">Sur quoi se poser, et quand</h2>
-        <p class="sec-intro">Le gear est un chantier qui se compte en mois. La règle qui traverse tout ce chapitre : <strong>ne dépensez jamais sur une pièce que vous ne garderez pas</strong>. Vrai pour tout le monde, encore plus pour une classe dont la progression passe surtout par les skills.</p>
+        <p class="sec-intro">Le gear est le système le plus complet et le plus long à obtenir du jeu. La règle qui traverse tout ce chapitre : <strong>ne dépensez jamais sur une pièce que vous ne garderez pas</strong>. Vrai pour tout le monde, encore plus pour une classe dont la progression passe surtout par les skills.</p>
 
         <h3><svg class="ic"><use href="#i-warn"/></svg>Pendant le leveling</h3>
         <p>Équipez ce qui drop, n'achetez rien. Vous droppez, vous équipez, vous continuez. C'est tout. En particulier, l'<strong>arme gold que la fin du leveling vous offre</strong>, autour de l'iLevel&nbsp;57, est nulle : pas d'enchant, pas de manastone, pas un kinah dessus.</p>
@@ -1464,7 +1426,7 @@ nav.toc.desk{display:none;}
 
         <div class="note trap">
           <span class="lab"><svg class="ic"><use href="#i-warn"/></svg>Le piège du gear score</span>
-          <p><strong>Le gear score ne mesure pas votre puissance</strong>, et sur cette classe encore moins qu'ailleurs. Avec du gear moyen mais des skills aux paliers, vous sortirez plus de DPS qu'un joueur au double de gear score dont les skills plafonnent au 12. Si vous devez choisir entre push une pièce et franchir un palier, franchissez le palier.</p>
+          <p><strong>Le gear score n'est pas une mesure de puissance</strong>, et sur cette classe moins que sur aucune autre. Avec du gear moyen mais des skills aux paliers, vous taperez plus fort qu'un mec au double de gear score dont les skills plafonnent au 12. Si vous devez choisir entre push une pièce et franchir un palier, franchissez le palier.</p>
         </div>
       </section>
 
@@ -1472,7 +1434,7 @@ nav.toc.desk{display:none;}
       <section id="s15" class="rv">
         <span class="sec-num"><svg class="ic"><use href="#i-pvp"/></svg>Chapitre 15 — PvP</span>
         <h2 class="sec">Abîme, arène et embuscades</h2>
-        <p class="sec-intro">En PvP, l'Assassin n'est pas là pour faire du DPS au tas. Il est là pour <strong>supprimer une cible précise</strong>. Votre boulot n'est pas de taper sur la ligne de front, c'est de contourner et de supprimer la cible qui tient le camp d'en face.</p>
+        <p class="sec-intro">En PvP l'Assassin ne joue pas un rôle de DPS, il joue un rôle de <strong>menace</strong>. Votre boulot n'est pas de taper sur la ligne de front, c'est de contourner et de supprimer la cible qui tient le camp d'en face.</p>
 
         <h3><svg class="ic"><use href="#i-pvp"/></svg>Ce qui change par rapport au PvE</h3>
         <div class="tw">
@@ -1482,17 +1444,17 @@ nav.toc.desk{display:none;}
               <tr><td class="k">4<sup>e</sup> stigma</td><td>Savage Fang</td><td><strong>Throw Shadowblade</strong> — 20&nbsp;m avec slow, et reset quand vous achevez une cible</td></tr>
               <tr><td class="k">Ambush</td><td>Lifesteal, puis crit damage</td><td>Crit damage <em>et</em> seal de 5&nbsp;s</td></tr>
               <tr><td class="k">Insignia Explosion</td><td>Multi-hit</td><td>Conservation des stacks et stun — les spés qu'on ignore en PvE</td></tr>
-              <tr><td class="k">Flash Slice</td><td>Dégâts multi-cibles</td><td>Durée du blind</td></tr>
+              <tr><td class="k">Flash Slash</td><td>Dégâts multi-cibles</td><td>Durée du blind</td></tr>
               <tr><td class="k">Priorité de cible</td><td>Le boss</td><td>Heals et casters, jamais le tank</td></tr>
             </tbody>
           </table>
         </div>
-        <p>Et tous les candidats que j'écartais au chapitre&nbsp;7 reprennent leur sens : buff removal, <span class="skl" data-skill="shadow-walk"><svg class="ic" aria-hidden="true"><use href="#i-eye"/></svg><span class="n">Shadow Walk</span></span>, <span class="skl" data-skill="aerial-bind"><svg class="ic" aria-hidden="true"><use href="#i-assault"/></svg><span class="n">Aerial Bind</span></span>, <span class="skl" data-skill="evasion-contract"><svg class="ic" aria-hidden="true"><use href="#i-evade"/></svg><span class="n">Evasion Contract</span></span>, <span class="skl" data-skill="shadowstep"><svg class="ic" aria-hidden="true"><use href="#i-infiltrate"/></svg><span class="n">Shadowstep</span></span> et <span class="skl" data-skill="apply-poison"><svg class="ic" aria-hidden="true"><use href="#i-poison"/></svg><span class="n">Apply Poison</span></span>, taillé pour tomber sur un heal adverse. Le problème reste le même : vous n'avez que quatre slots, donc chaque stigma PvP que vous montez est un stigma PvE que vous ne montez pas.</p>
+        <p>Et toute la moitié « inutile » du kit reprend son sens : buff removal, shadow wall, airborne, retrait de CC, shadow step, et le poison qui réduit les heals reçus — celui-là est précisément fait pour tomber sur un heal.</p>
 
         <h3><svg class="ic"><use href="#i-ambush"/></svg>Le combo d'ouverture</h3>
         <div class="rota">
           <div class="st"><div><b>Buffs posés en amont</b><p>Avant l'engage, jamais pendant. Une seconde à buff devant la cible, c'est une seconde où elle vous voit venir.</p></div></div>
-          <div class="st"><div><b><span class="skl" data-skill="ambush"><svg class="ic" aria-hidden="true"><use href="#i-ambush"/></svg><span class="n">Ambush</span></span></b><p>Téléport derrière + stun. Le seal de 5&nbsp;s empêche la cible de répondre.</p></div></div>
+          <div class="st"><div><b><span class="skl" data-skill="ambush"><svg class="ic" aria-hidden="true"><use href="#i-ambush"/></svg><span class="n">Ambush</span></span></b><p>Téléport derrière + stun. Le seal de 5&nbsp;s est ce qui empêche la cible de répondre.</p></div></div>
           <div class="st"><div><b><span class="skl" data-skill="shadow-fall"><svg class="ic" aria-hidden="true"><use href="#i-shadowfall"/></svg><span class="n">Shadow Fall</span></span>, puis la chaîne de dégâts</b><p>Le burst tombe pendant que le CC tient.</p></div></div>
           <div class="st"><div><b><span class="skl" data-skill="triniels-dagger"><svg class="ic" aria-hidden="true"><use href="#i-cooldown"/></svg><span class="n">Triniel's Dagger</span></span>, puis <span class="skl" data-skill="ambush"><svg class="ic" aria-hidden="true"><use href="#i-ambush"/></svg><span class="n">Ambush</span></span> à nouveau</b><p>La dague rabote assez de CD pour rendre un second <span class="skl" data-skill="ambush"><svg class="ic" aria-hidden="true"><use href="#i-ambush"/></svg><span class="n">Ambush</span></span> dispo. C'est là que la cible meurt — ou qu'elle vous échappe.</p></div></div>
         </div>
@@ -1502,7 +1464,7 @@ nav.toc.desk{display:none;}
 
         <div class="note trap">
           <span class="lab"><svg class="ic"><use href="#i-warn"/></svg>L'erreur du débutant en Abîme</span>
-          <p>Engage sans plan de sortie. Vous avez un burst, pas une barre de vie. Si la cible ne tombe pas dans la fenêtre, la seule question qui compte devient : par où je pars. Gardez toujours un déplacement en réserve, et si le burst ne suffit pas, décrochez au lieu de vous entêter.</p>
+          <p>Engage sans plan de sortie. Vous avez un burst, pas une barre de vie. Si la cible ne tombe pas dans la fenêtre, la question n'est pas « comment je continue » mais « par où je pars ». Gardez toujours un déplacement en réserve, et considérez qu'un burst raté est un burst annulé, pas un combat à finir.</p>
         </div>
         <p>Dernier point : le matchmaking PvP tourne par paire de serveurs toutes les deux semaines. Vos premières heures d'Abîme servent surtout à lancer le stock d'AP — commencez tôt même mal gear, la monnaie se cumule et la boutique PvP alimente la branche PvP du Daevanion.</p>
       </section>
@@ -1543,8 +1505,8 @@ nav.toc.desk{display:none;}
 
         <div class="check" data-ck="lvl">
           <div class="ck-hd"><span>Route vers le 45</span><span><span class="cnt">0/8</span> <button class="reset-btn" type="button" data-reset="lvl">Reset</button></span></div>
-          <label><input type="checkbox" id="ck-lvl-1"><span>Quick Slice spé <b>mana</b> dès les premiers niveaux</span></label>
-          <label><input type="checkbox" id="ck-lvl-2"><span>Palier 8 posé sur Ambush, Shadowstrike, Heart Gore, Shadow Fall — en lignes de survie</span></label>
+          <label><input type="checkbox" id="ck-lvl-1"><span>Quick Slash spé <b>mana</b> dès les premiers niveaux</span></label>
+          <label><input type="checkbox" id="ck-lvl-2"><span>Palier 8 posé sur Ambush, Shadow Strike, Heart Gore, Shadow Fall — en lignes de survie</span></label>
           <label><input type="checkbox" id="ck-lvl-3"><span>Carte dézoomée en permanence, détour systématique sur les plumes</span></label>
           <label><input type="checkbox" id="ck-lvl-4"><span>Donjons scellés cochés sur ma carte <b>et</b> sur celle d'en face</span></label>
           <label><input type="checkbox" id="ck-lvl-5"><span>Savage Roar monté au niveau 10</span></label>
@@ -1557,14 +1519,14 @@ nav.toc.desk{display:none;}
           <div class="ck-hd"><span>Première semaine au cap</span><span><span class="cnt">0/10</span> <button class="reset-btn" type="button" data-reset="cap">Reset</button></span></div>
           <label><input type="checkbox" id="ck-cap-1"><span>Les quatre stigmas choisis et assumés</span></label>
           <label><input type="checkbox" id="ck-cap-2"><span>Triniel's Dagger montée à 10 pour activer le CDR</span></label>
-          <label><input type="checkbox" id="ck-cap-3"><span>Macro montée : Shadowstrike → Triniel's Dagger → Insignia Explosion → Heart Gore → Savage Fang</span></label>
+          <label><input type="checkbox" id="ck-cap-3"><span>Macro montée : Shadow Strike → Triniel's Dagger → Insignia Explosion → Heart Gore → Savage Fang</span></label>
           <label><input type="checkbox" id="ck-cap-4"><span>Delay de macro calé sur mon ping, ombres visibles à l'écran</span></label>
           <label><input type="checkbox" id="ck-cap-5"><span>Indicateur de dos activé dans les options</span></label>
           <label><input type="checkbox" id="ck-cap-6"><span>Arbres Zikel, Vaizel et Triniel identifiés, zéro point en défensif</span></label>
           <label><input type="checkbox" id="ck-cap-7"><span>Arme du Fire Temple en objectif, tickets ramassés</span></label>
           <label><input type="checkbox" id="ck-cap-8"><span>Trois titres équipés, même les moins bons</span></label>
           <label><input type="checkbox" id="ck-cap-9"><span>Cinq arbres de Genus Insight au niveau 10 avant tout lock</span></label>
-          <label><input type="checkbox" id="ck-cap-10"><span>Premières heures d'Abîme faites, le stock d'AP est lancé</span></label>
+          <label><input type="checkbox" id="ck-cap-10"><span>Premières heures d'Abîme faites pour lancer le stock d'AP</span></label>
         </div>
 
         <div class="check" data-ck="audit">
@@ -1589,7 +1551,7 @@ nav.toc.desk{display:none;}
           <div class="row">
             <div class="q">Slots de stigma</div>
             <div class="a"><span class="who">DocDany &amp; aLuckyRO</span>Cinq slots au moment où les guides ont été filmés sur la KR.</div>
-            <div class="b"><span class="who">Dossiers écrits récents</span>Six depuis le Chapitre&nbsp;1. La globale en annonce quatre : c'est l'hypothèse que je retiens, et elle reste à confirmer en jeu.</div>
+            <div class="b"><span class="who">Dossiers écrits récents</span>Six depuis le Chapitre&nbsp;1. La globale en annonce quatre, et la bêta l'a confirmé.<span class="bta">tranché en bêta</span> C'est une limite de Saison 1, pas un chiffre définitif.</div>
           </div>
           <div class="row">
             <div class="q">Ordre de montée des stigmas</div>
@@ -1632,7 +1594,6 @@ nav.toc.desk{display:none;}
         <ul class="srclist">
           <li><span class="lvl terr">Perso</span><span>Mes heures d'Assassin sur la TW. C'est le filtre que j'applique à tout le reste : ce qui ne collait pas avec ce que j'ai vu en jeu a été écarté, ou signalé comme à vérifier.</span></li>
           <li><span class="lvl off">Officiel</span><span>Les différences de la globale — 4 slots de stigma, cap 20, pas de gear héroïque, gates d'iLevel, tailles de groupe — viennent des communications NC sur la Saison&nbsp;1 et de leur reprise par la presse spé.</span></li>
-          <li><span class="lvl off">Planner de build</span><span>Une feuille de build complète : les 12 actifs, les 10 passifs et les 13 stigmas, avec le libellé exact de chaque node, le niveau atteint et le coût en SP. C'est ma source de référence pour les chapitres&nbsp;3, 4, 6 et 7, et c'est elle qui a corrigé plusieurs erreurs que je traînais depuis les guides écrits — notamment les paliers de nodes et la cible du cooldown de Savage Roar.</span></li>
           <li><span class="lvl terr">DocDany</span><span>Deux guides vidéo FR : le guide PvE Assassin complet (stats, Daevanion, titres, pets, skills, cartes, gear) et l'update plus récente (skills, passifs, stigmas, macro, gameplay). C'est ma source la plus détaillée sur le Panthéon, les titres, le gear et l'arbitrage smite / CDR — et la seule qui raisonne avec notre latence.</span></li>
           <li><span class="lvl terr">aLuckyRO</span><span>Deux guides vidéo EN construits explicitement pour la globale et pour un perso <em>fraîchement</em> au cap : skills et stigmas d'un côté, Daevanion et macro de l'autre. De là viennent les spés de début de jeu, le budget de ≈240 points, les priorités de Daevanion et le réglage du delay de macro.</span></li>
           <li><span class="lvl com">Dossiers KR / TW</span><span>Quatre dossiers coréens détaillés sur l'Assassin, plus un manuel communautaire anglophone très méthodique. Les plus précis sur les numéros de spé et les stats d'endgame, et les plus décalés par rapport à ce qu'on aura — le manuel précise lui-même qu'il suppose 6 stigmas au niveau 25.</span></li>
@@ -1642,16 +1603,22 @@ nav.toc.desk{display:none;}
         <h3><svg class="ic"><use href="#i-target"/></svg>À vérifier en jeu le 5 octobre</h3>
         <ul>
           <li>Le nombre réel de slots de stigma, et le cap de niveau des stigmas et des skills.</li>
+          <li>Les niveaux d'ouverture des spés : 8 / 16 / 20 comme retenu ici, ou un deuxième palier au 12.</li>
           <li>Le nombre de slots d'arcane et d'arbres de Daevanion dispos au lancement.</li>
           <li>Les noms FR de tout le kit, du smite en particulier.</li>
           <li>Le coût des resets de mastery, de stigma et de nodes Daevanion.</li>
           <li>Si l'arme du Fire Temple est bien la première arme accessible en Saison&nbsp;1.</li>
         </ul>
+
+        <div class="note ndlr">
+          <span class="lab n"><svg class="ic"><use href="#i-book"/></svg>Sur les icônes</span>
+          <p>Les pictos de cette page sont dessinés à la main, en SVG, pas repris du jeu. C'était le choix le plus propre : ils s'adaptent au thème clair et sombre, restent nets à toutes les tailles, ne pèsent rien et ne dépendent d'aucun site externe qui pourrait tomber. Si les icônes officielles vous manquent, chaque emplacement est un simple bloc à remplacer.</p>
+        </div>
       </section>
 
       <footer>
-        <p>Deux semaines d'écriture, de relectures et de recoupements ; cette version est à jour au 15 septembre 2026, avant l'ouverture des serveurs européens. Guide de classe uniquement : l'Assassin, et sa progression sur la version globale. Une partie des noms et des chiffres bougera au lancement ; je continuerai à mettre la page à jour dans les premières semaines.</p>
-        <p>Merci à DocDany et à aLuckyRO, dont les guides vidéo ont servi de colonne vertébrale à ce document. Habillage graphique original. Les icônes de compétences sont celles du jeu ; Aion&nbsp;2 et ses visuels sont la propriété de NCSOFT Corporation.</p>
+        <p>Dernière mise à jour le 18 septembre 2026, après le Launch Scale Test et avant l'ouverture des serveurs européens. Guide de classe uniquement, l'Assassin et sa progression sur la version globale. Une partie des noms et des chiffres bougera au lancement. Je mettrai la page à jour dans les premières semaines.</p>
+        <p>Merci à DocDany et à aLuckyRO, dont les guides vidéo ont servi de colonne vertébrale à ce document. Habillage graphique et pictogrammes originaux. Ni le logo ni les visuels d'Aion&nbsp;2 ne sont reproduits ici ; Aion&nbsp;2 est une marque de NCSOFT Corporation.</p>
       </footer>
 
     </main>
@@ -1662,7 +1629,7 @@ nav.toc.desk{display:none;}
 (function(){
   var items = [
     ["s1","La classe"],["s2","Les limitations"],["s3","Le budget de points"],
-    ["s4","Le kit"],["s5","Le leveling"],["s6","Les nodes"],["s7","Les stigmas"],
+    ["s4","Le kit"],["s5","Le leveling"],["s6","Les spés"],["s7","Les 4 stigmas"],
     ["s8","Le Daevanion"],["s9","Les stats"],["s10","Arcanes, Panthéon, titres"],
     ["s11","Genus Insight"],["s12","La macro"],["s13","La rotation"],["s14","Le gear"],
     ["s15","PvP"],["s16","Semaine &amp; checklists"],["s17","Recoupements"],["s18","Les sources"]
@@ -1826,51 +1793,47 @@ nav.toc.desk{display:none;}
 </script>
 
 <!-- ============================================================
-     ICÔNES OFFICIELLES
+     ICÔNES OFFICIELLES — comment les brancher
      ------------------------------------------------------------
-     Les images vivent dans le dossier icons/ posé à côté de cette
-     page. Pour changer une icône, remplacez le fichier ou modifiez
-     l'adresse ci-dessous : la substitution se fait partout dans la
-     page, sur tous les emplacements de ce skill.
-     Laisser une valeur vide fait retomber sur un picto de repli.
+     Chaque skill de la page porte un attribut data-skill. Pour
+     remplacer mes pictogrammes par les icônes du jeu, il suffit de
+     renseigner une adresse en face du skill correspondant ci-dessous :
+     la page fait la substitution toute seule, partout, sans toucher
+     au reste du document.
+
+     Deux façons de renseigner une adresse :
+       1. un fichier posé à côté de la page      "icons/heart-gore.png"
+       2. une image encodée dans la page          "data:image/png;base64,..."
+
+     Évitez de pointer vers une image hébergée sur un site tiers :
+     le jour où il change ses adresses, toutes vos icônes disparaissent.
      ============================================================ -->
 <script>
 var SKILL_ICONS = {
-  "heart-gore":                "icons/Heart_Gore.png",
-  "insignia-explosion":        "icons/Insignia_Explosion.png",
-  "quick-slice":               "icons/Quick_Slice.png",
-  "savage-roar":               "icons/Savage_Roar.png",
-  "storm-rampage":             "icons/Storm_Rampage.png",
-  "shadowstrike":              "icons/Shadowstrike.png",
-  "ambush":                    "icons/Ambush.png",
-  "shadow-fall":               "icons/Shadow_Fall.png",
-  "whirlwind-slice":           "icons/Whirlwind_Slice.png",
-  "flash-slice":               "icons/Flash_Slice.png",
-  "infiltrate":                "icons/Infiltrate.png",
-  "defiance":                  "icons/Defiance.png",
-  "illusive-clone":            "icons/Illusive_Clone.png",
-  "swift-contract":            "icons/Swift_Contract.png",
-  "triniels-dagger":           "icons/Triniel%27s_Dagger.png",
-  "savage-fang":               "icons/Savage_Fang.png",
-  "evasion-stance":            "icons/Evasion_Stance.png",
-  "throw-shadowblade":         "icons/Throw_Shadowblade.png",
-  "assault-stance":            "icons/Assault_Stance.png",
-  "rear-smite":                "icons/Rear_Smite.png",
-  "impact-hit":                "icons/Impact_Hit.png",
-  "heightened-sixth-sense":    "icons/Heightened_Sixth_Sen.png",
-  "revitalization-contract":   "icons/Revitalization_Contra.png",
-  "defense-break":             "icons/Defence_Break.png",
-  "shadow-walk":               "icons/Shadow_Walk.png",
-  "aerial-bind":               "icons/Aerial_Bind.png",
-  "shadowstep":                "icons/Shadowstep.png",
-  "apply-poison":              "icons/Apply_Poison.png",
-  "smoke-bomb":                "icons/Smoke_Bomb.png",
-  "exploit-weakness":          "icons/Exploit_Weakness.png",
-  "determination":             "icons/Determination.png",
-  "spiral-slice":              "icons/Spiral_Slice.png",
-  "assault-ambush":            "icons/Assault_Ambush.png",
-  "evasion-contract":          "icons/Evasion_Contract.png",
-  "ambush-stance":             "icons/Ambush_Stance.png"
+  "heart-gore":          "",
+  "insignia-explosion":  "",
+  "quick-slash":         "",
+  "savage-roar":         "",
+  "storm-rampage":       "",
+  "shadow-strike":       "",
+  "ambush":              "",
+  "shadow-fall":         "",
+  "whirlwind-slash":     "",
+  "flash-slash":         "",
+  "infiltrate":          "",
+  "defiance":            "",
+  "illusion-clone":      "",
+  "swift-contract":      "",
+  "triniels-dagger":     "",
+  "savage-fang":         "",
+  "evasion-stance":      "",
+  "throw-shadowblade":   "",
+  "assault-stance":      "",
+  "rear-smite":          "",
+  "impact-hit":          "",
+  "sixth-sense":         "",
+  "contract-of-revival": "",
+  "defense-break":       ""
 };
 (function(){
   if(typeof SKILL_ICONS !== "object") return;
@@ -1880,12 +1843,9 @@ var SKILL_ICONS = {
     var svg = (el.tagName.toLowerCase() === "svg") ? el : el.querySelector("svg.ic");
     if(!svg || !svg.parentNode) return;
     var img = document.createElement("img");
-    img.src = url; img.alt = ""; img.loading = "lazy";
-    img.setAttribute("aria-hidden","true");
+    img.src = url; img.alt = ""; img.setAttribute("aria-hidden","true");
     img.className = "ic-img";
-    var box = svg.parentNode;
     svg.parentNode.replaceChild(img, svg);
-    if(box.classList && box.classList.contains("icbox")) box.classList.add("img");
   });
 })();
 </script>
